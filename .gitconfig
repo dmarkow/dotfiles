@@ -1,0 +1,13 @@
+[alias]
+	up = pull
+	co = checkout
+[user]
+	name = Dylan Markow
+	email = dylan@dylanmarkow.com
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[core]
+	editor = vim

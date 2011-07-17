@@ -1,4 +1,7 @@
-macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
+if has("gui_macvim")
+    macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
+
+endif
 map <D-F> :Ack<space>
 map <D-/> <plug>NERDCommenterToggle<CR>
 imap <D-/> <Esc><plug>NERDCommenterToggle<CR>i
