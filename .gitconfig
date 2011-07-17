@@ -1,6 +1,7 @@
 [alias]
 	up = pull
 	co = checkout
+	st = status
 [user]
 	name = Dylan Markow
 	email = dylan@dylanmarkow.com
