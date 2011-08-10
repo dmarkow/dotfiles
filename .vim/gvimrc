@@ -1,0 +1,11 @@
+macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
+map <D-F> :Ack<space>
+map <D-/> <plug>NERDCommenterToggle<CR>
+imap <D-/> <Esc><plug>NERDCommenterToggle<CR>i
+
+" Command-][ to increase/decrease indentation
+vmap <D-]> >gv
+vmap <D-[> <gv
+map <Leader>= <C-w>=
+imap <Leader>= <Esc> <C-w>=
+

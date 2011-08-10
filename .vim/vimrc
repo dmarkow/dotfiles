@@ -97,10 +97,12 @@ augroup myfiletypes
     "clear old autocmds in group
     autocmd!
     "for ruby, autoindent with two spaces, always expand tabs
+    autocmd BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
     autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber set ai sw=2 sts=2 et
     autocmd FileType python set sw=4 sts=4 et
 augroup END
 set switchbuf=useopen
+let macvim_hig_shift_movement = 1
 
 function! RenameFile()
     let old_name = expand('%')
@@ -119,20 +121,20 @@ nnoremap <leader>' ""yls<c-r>={'"': "'", "'": '"'}[@"]<cr><esc>
 
 map <leader>gr :topleft :split config/routes.rb<cr>
 function! ShowRoutes()
-  " Requires 'scratch' plugin
-  :topleft 100 :split __Routes__
-  " Make sure Vim doesn't write __Routes__ as a file
-  :set buftype=nofile
-  " Delete everything
-  :normal 1GdG
-  " Put routes output in buffer
-  :0r! rake -s routes
-  " Size window to number of lines (1 plus rake output length)
-  :exec ":normal " . line("$") . "_ "
-  " Move cursor to bottom
-  :normal 1GG
-  " Delete empty trailing line
-  :normal dd
+    " Requires 'scratch' plugin
+    :topleft 100 :split __Routes__
+    " Make sure Vim doesn't write __Routes__ as a file
+    :set buftype=nofile
+    " Delete everything
+    :normal 1GdG
+    " Put routes output in buffer
+    :0r! rake -s routes
+    " Size window to number of lines (1 plus rake output length)
+    :exec ":normal " . line("$") . "_ "
+    " Move cursor to bottom
+    :normal 1GG
+    " Delete empty trailing line
+    :normal dd
 endfunction
 map <leader>gR :call ShowRoutes()<cr>
 nnoremap <leader><leader> <c-^>
@@ -148,5 +150,17 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 nnoremap <c-n> :let &wh = (&wh == 999 ? 10 : 999)<CR><C-W>=
+function! ShowColors()
+    let num = 255
+    while num >= 0
+        exec 'hi col_'.num.' ctermbg='.num.' ctermfg=white'
+        exec 'syn match col_'.num.' "ctermbg='.num.':...." containedIn=ALL'
+        call append(0, 'ctermbg='.num.':....')
+        let num = num - 1
+    endwhile
+endfunction
 
+let g:CommandTMaxHeight=20
+let g:syntastic_enable_signs=1
+let g:syntastic_quiet_warnings=1
 
