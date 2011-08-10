@@ -30,7 +30,6 @@ set whichwrap+=<,>,h,l,[,]
 set report=0
 set nostartofline
 set background=light
-color solarized
 command! W :w
 set showtabline=2
 set list
@@ -75,6 +74,9 @@ if has("gui_running")
     set go-=T
     set go-=L
     set go-=r
+    color solarized
+else
+    color desert
 endif
 :set t_Co=256
 :set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
