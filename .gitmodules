@@ -50,3 +50,6 @@
 [submodule ".vim/bundle/vim-markdown"]
 	path = .vim/bundle/vim-markdown
 	url = git://github.com/tpope/vim-markdown
+[submodule ".vim/bundle/Color-Sampler-Pack"]
+	path = .vim/bundle/Color-Sampler-Pack
+	url = git://github.com/vim-scripts/Color-Sampler-Pack.git

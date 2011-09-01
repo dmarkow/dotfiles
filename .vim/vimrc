@@ -78,7 +78,7 @@ if has("gui_running")
     set go-=T
     set go-=L
     set go-=r
-    color solarized
+    color xoria256
 else
     color desert
 endif
