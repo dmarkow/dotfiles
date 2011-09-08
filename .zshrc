@@ -26,9 +26,12 @@ export PATH=/usr/local/Cellar/python/2.7.1/bin:/usr/local/bin:/usr/bin:/bin:/usr
 alias sshpdx='ssh dylan@pdx01.petefowler.com'
 alias sshast='ssh dylan@pdx.petefowler.com'
 alias sshsc='ssh dylan@sc.petefowler.com'
+alias sshco='ssh dylan@co.petefowler.com'
+alias sshcol='ssh dylan@192.168.1.30'
 alias gi='gem install --no-ri --no-rdoc'
 alias e='mvim'
 alias et='e app autotest config db features lib public spec vendor/plugins Rakefile Capfile Gemfile Gemfile.lock config.ru'
 #export AUTOFEATURE=true
-
+alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias pg_stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
