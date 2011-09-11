@@ -204,6 +204,14 @@ function! RunNearestTest()
     let spec_line_number = line('.')
     call RunTestFile(":" . spec_line_number)
 endfunction
+map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
+map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
+map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
+map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
+map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
+map <leader>gs :CommandTFlush<cr>\|:CommandT spec<cr>
+map <leader>gg :topleft 100 :split Gemfile<cr>
+
 map <leader>t :CommandTFlush<cr>\|:CommandT<cr>
 " Run this file
 map <leader>f :call RunTestFile()<cr>
