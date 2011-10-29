@@ -5,7 +5,8 @@ if has("gui_macvim")
     imap <D-t> <Esc>:CommandTFlush<cr>\|:CommandT<cr>
 
 endif
-map <D-F> :Ack<space>
+map <D-F> :Ack!<space>
+imap <D-F> <Esc>:Ack!<space>
 map <D-/> <plug>NERDCommenterToggle<CR>j
 imap <D-/> <Esc><plug>NERDCommenterToggle<CR>i
 

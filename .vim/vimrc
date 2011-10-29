@@ -67,7 +67,7 @@ if &t_Co > 2 || has("gui_running")
     syntax on
     set hlsearch
     if has("gui_macvim")
-        set guifont=Inconsolata:h14
+        set guifont=Monaco:h11
     else
         set guifont=Inconsolata\ 14
     endif
@@ -78,7 +78,7 @@ if has("gui_running")
     set go-=T
     set go-=L
     set go-=r
-    color xoria256
+    color jellybeans
 else
     color desert
 endif
