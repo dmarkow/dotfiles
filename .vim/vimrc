@@ -84,11 +84,10 @@ if has("gui_running")
     set go-=T
     set go-=L
     set go-=r
-    color jellybeans
-else
-    color desert
 endif
 :set t_Co=256
+:set background=dark
+:color ir_black
 :set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 :hi User1 term=inverse,bold cterm=inverse,bold ctermfg=red
 

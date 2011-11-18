@@ -1,2 +1,4 @@
+--type-set=coffeescript=.coffee
 --type-add=ruby=.haml
+--type-add=coffeescript=.coffee
 --nobin
