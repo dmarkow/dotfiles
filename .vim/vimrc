@@ -40,7 +40,7 @@ set showmatch
 set title
 set visualbell
 set mousehide
-set synmaxcol=132
+set synmaxcol=200
 
 if has("autocmd")
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
