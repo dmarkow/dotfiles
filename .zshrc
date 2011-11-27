@@ -4,6 +4,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Set to the name theme to load.
 # Look in ~/.oh-my-zsh/themes/
 export ZSH_THEME="dstufft"
+export ZSH_THEME="wezm+"
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
 
@@ -16,12 +17,12 @@ export EDITOR="mvim -f"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bundler osx rails3 ruby cap github brew pow)
+plugins=(git bundler osx rails3 ruby cap github brew pow rvm)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/Cellar/python/2.7.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+export PATH=/usr/local/Cellar/python/2.7.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/.oh-my-zsh/tools
 
 alias sshpdx='ssh dylan@pdx01.petefowler.com'
 alias sshast='ssh dylan@pdx.petefowler.com'
@@ -34,5 +35,5 @@ alias et='e app autotest config db features lib public spec vendor/plugins Rakef
 #export AUTOFEATURE=true
 alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pg_stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
-alias mongo_start='mongod run --config /usr/local/Cellar/mongodb/2.0.0-x86_64/mongod.conf'
+alias mongo_start='mongod run --config /usr/local/Cellar/mongodb/2.0.1-x86_64/mongod.conf'
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
