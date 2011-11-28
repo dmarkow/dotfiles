@@ -75,7 +75,7 @@ if &t_Co > 2 || has("gui_running")
         set guifont=Inconsolata:h15
         " set guifont=Monaco:h11
     else
-        set guifont=Inconsolata\ 14
+        set guifont=Ubuntu\ Mono\ 11
     endif
 end
 if has("gui_running")
