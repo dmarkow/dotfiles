@@ -17,7 +17,7 @@ export EDITOR="mvim -f"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bundler osx rails3 ruby cap github brew pow rvm)
+plugins=(git osx rails3 ruby cap github brew pow rvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -29,13 +29,14 @@ alias sshpdx='ssh dylan@pdx01.petefowler.com'
 alias sshast='ssh dylan@pdx.petefowler.com'
 alias sshsc='ssh dylan@sc.petefowler.com'
 alias sshco='ssh dylan@co.petefowler.com'
-alias sshcol='ssh dylan@192.168.1.30'
+alias sshcol='ssh dylan@10.3.0.10'
 alias gi='gem install --no-ri --no-rdoc'
 alias e='mate'
 alias et='e app autotest config db features lib public spec vendor/plugins Rakefile Capfile Gemfile Gemfile.lock config.ru'
 #export AUTOFEATURE=true
 alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pg_stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
-alias mongo_start='mongod run --config /usr/local/Cellar/mongodb/2.0.1-x86_64/mongod.conf'
 alias devlog="tail -f log/development.log | grep -vE \"(^\s*$|asset)\""
+alias redis_start='redis-server /usr/local/etc/redis.conf'
+alias mongo_start='mongod run --config /usr/local/Cellar/mongodb/2.0.2-x86_64/mongod.conf'
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
