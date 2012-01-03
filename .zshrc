@@ -23,6 +23,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/usr/local/Cellar/python/2.7.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/.oh-my-zsh/tools
+export EDITOR="/usr/local/bin/mate -w"
 
 alias sshpdx='ssh dylan@pdx01.petefowler.com'
 alias sshast='ssh dylan@pdx.petefowler.com'
@@ -36,4 +37,5 @@ alias et='e app autotest config db features lib public spec vendor/plugins Rakef
 alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pg_stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias mongo_start='mongod run --config /usr/local/Cellar/mongodb/2.0.1-x86_64/mongod.conf'
+alias devlog="tail -f log/development.log | grep -vE \"(^\s*$|asset)\""
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
