@@ -17,7 +17,7 @@ export EDITOR="mvim -f"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bundler osx rails3 ruby cap github brew pow rvm)
+plugins=(git osx rails3 ruby cap github brew pow rvm)
 
 source $ZSH/oh-my-zsh.sh
 
