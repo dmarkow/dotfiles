@@ -17,12 +17,20 @@ export EDITOR="mvim -f"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx rails3 ruby cap github brew pow rvm)
+plugins=(git bundler osx rails3 ruby cap github brew pow rvm)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/usr/local/Cellar/python/2.7.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/.oh-my-zsh/tools
+
+export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
+export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/pk-*.pem)"
+export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
+export EC2_AMITOOL_HOME="/usr/local/Cellar/ec2-ami-tools/1.3-45758/jars"
+export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.5.0.1/jars"
+export EC2_URL="https://ec2.us-west-2.amazonaws.com"
+export EC2_KEYPAIR="$HOME/.ec2/dylan.pem"
 
 alias sshpdx='ssh dylan@pdx01.petefowler.com'
 alias sshast='ssh dylan@pdx.petefowler.com'
