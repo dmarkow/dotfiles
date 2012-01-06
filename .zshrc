@@ -23,6 +23,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/usr/local/Cellar/python/2.7.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/.oh-my-zsh/tools
+export EDITOR="/usr/local/bin/mate -w"
 
 export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
 export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/pk-*.pem)"
@@ -43,6 +44,7 @@ alias et='e app autotest config db features lib public spec vendor/plugins Rakef
 #export AUTOFEATURE=true
 alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pg_stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+alias devlog="tail -f log/development.log | grep -vE \"(^\s*$|asset)\""
 alias redis_start='redis-server /usr/local/etc/redis.conf'
 alias mongo_start='mongod run --config /usr/local/Cellar/mongodb/2.0.2-x86_64/mongod.conf'
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
