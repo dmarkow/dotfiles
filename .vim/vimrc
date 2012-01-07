@@ -72,7 +72,8 @@ if &t_Co > 2 || has("gui_running")
     syntax on
     set hlsearch
     if has("gui_macvim")
-        set guifont=Inconsolata:h15
+        set guifont=Consolas:h13
+        " set guifont=Inconsolata:h15
         " set guifont=Monaco:h11
     else
         set guifont=Ubuntu\ Mono\ 11
@@ -86,8 +87,8 @@ if has("gui_running")
     set go-=r
 endif
 :set t_Co=256
-:set background=dark
-:color jellybeans+
+" :set background=dark
+" :color jellybeans+
 :set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 :hi User1 term=inverse,bold cterm=inverse,bold ctermfg=red
 
