@@ -2,9 +2,6 @@
 	path = .vim/bundle/Command-T
 	url = git://github.com/vim-scripts/Command-T.git
     ignore = dirty
-[submodule ".vim/bundle/vim-colors-solarized"]
-	path = .vim/bundle/vim-colors-solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
 [submodule ".vim/bundle/vim-rails"]
 	path = .vim/bundle/vim-rails
 	url = git://github.com/tpope/vim-rails.git
@@ -49,9 +46,6 @@
 [submodule ".vim/bundle/Color-Sampler-Pack"]
 	path = .vim/bundle/Color-Sampler-Pack
 	url = git://github.com/vim-scripts/Color-Sampler-Pack.git
-[submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
 [submodule ".vim/bundle/vim-coffee-script"]
 	path = .vim/bundle/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
