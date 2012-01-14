@@ -33,7 +33,7 @@ export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.5.0.1/jars"
 export EC2_URL="https://ec2.us-west-2.amazonaws.com"
 export EC2_KEYPAIR="$HOME/.ec2/dylan.pem"
 
-alias sshpdx='ssh dylan@pdx01.petefowler.com'
+alias sshpdx='ssh -p 8022 dylan@pdx01.petefowler.com'
 alias sshast='ssh dylan@pdx.petefowler.com'
 alias sshsc='ssh dylan@sc.petefowler.com'
 alias sshco='ssh dylan@co.petefowler.com'
