@@ -116,6 +116,16 @@ augroup END
 set switchbuf=useopen
 let macvim_hig_shift_movement = 1
 
+function! s:bashrockets() range
+  let lnum = a:firstline
+  while lnum <= a:lastline
+    let newline = substitute(getline(lnum), ':\(\w\+\)\s*=>', '\1:', 'g')
+    call setline(lnum, newline)
+    let lnum += 1
+  endwhile
+endfunction
+command! -range Bashrockets :<line1>,<line2>call s:bashrockets()
+
 function! RenameFile()
     let old_name = expand('%')
     let new_name = input('New file name: ', expand('%'))
