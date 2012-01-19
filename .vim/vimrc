@@ -87,8 +87,8 @@ if has("gui_running")
     set go-=r
 endif
 :set t_Co=256
-" :set background=dark
-" :color jellybeans+
+:color solarized
+:set bg=light
 :set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 :hi User1 term=inverse,bold cterm=inverse,bold ctermfg=red
 
