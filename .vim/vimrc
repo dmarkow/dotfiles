@@ -32,12 +32,13 @@ set showtabline=2
 set list
 set listchars=tab:▸\ ,trail:·
 set shellslash
+set shell=/bin/sh
 set history=10000
 set showmatch
 set title
 set visualbell
 set mousehide
-set synmaxcol=200
+" set synmaxcol=200
 
 if has("autocmd")
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
@@ -179,7 +180,7 @@ function! ShowColors()
     endwhile
 endfunction
 
-let g:CommandTMaxHeight=20
+" let g:CommandTMaxHeight=20
 let g:syntastic_enable_signs=1
 let g:syntastic_quiet_warnings=1
 
@@ -188,7 +189,7 @@ function! RunTests(filename)
     " Write the file and run tests for the given filename
     :w
     :silent !echo;echo;echo;echo;echo
-    exec ":!bundle exec rspec " . a:filename
+    exec ":!rspec " . a:filename
 endfunction
 
 function! SetTestFile()
@@ -217,6 +218,11 @@ function! RunNearestTest()
     let spec_line_number = line('.')
     call RunTestFile(":" . spec_line_number)
 endfunction
+if &term =~ "xterm"
+    let g:CommandTCancelMap = ['<ESC>', '<C-c>']
+    let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
+    let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
+endif
 map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
 map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
 map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
@@ -227,12 +233,28 @@ map <leader>gg :topleft 100 :split Gemfile<cr>
 
 map <leader>t :CommandTFlush<cr>\|:CommandT<cr>
 " Run this file
-map <leader>f :call RunTestFile()<cr>
+map <leader>s :call RunTestFile()<cr>
 " Run only the example under the cursor
-map <leader>F :call RunNearestTest()<cr>
+map <leader>S :call RunNearestTest()<cr>
 " Run all test files
 map <leader>a :A<cr>
 map <leader>r :R<cr>
-map <leader>s :!rspec %<cr>
+" map <leader>s :!rspec %<cr>
 ":call RunTests('spec')<cr>
 
+function! PromoteToLet()
+  :normal! dd
+  " :exec '?^\s*it\>'
+  :normal! P
+  :.s/\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
+  :normal ==
+  "         " :normal! <<
+  "           " :normal! ilet(:
+  "             " :normal! f 2cl) {
+  "               " :normal! A }
+endfunction
+:command! PromoteToLet :call PromoteToLet()
+:map <leader>p :PromoteToLet<cr>
+
+" Indent p tags
+autocmd FileType html,eruby if g:html_indent_tags !~ '\\|p\>' | let g:html_indent_tags .= '\|p\|li\|dt\|dd' | endif

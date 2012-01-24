@@ -3,14 +3,13 @@ export ZSH=$HOME/.oh-my-zsh
 
 # Set to the name theme to load.
 # Look in ~/.oh-my-zsh/themes/
-export ZSH_THEME="dstufft"
 export ZSH_THEME="wezm+"
+
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
 
 # Comment this out to disable weekly auto-update checks
 export DISABLE_AUTO_UPDATE="true"
-export EDITOR="mvim -f"
 
 # Uncomment following line if you want to disable colors in ls
 # export DISABLE_LS_COLORS="true"
@@ -22,29 +21,25 @@ plugins=(git bundler osx rails3 ruby cap github brew pow rvm)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+# Set terminal to allow CTRL+S in vim
+stty -ixon
+
 export PATH=/usr/local/Cellar/python/2.7.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/.oh-my-zsh/tools
-export EDITOR="/usr/local/bin/mate -w"
 
-export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
-export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/pk-*.pem)"
-export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
-export EC2_AMITOOL_HOME="/usr/local/Cellar/ec2-ami-tools/1.3-45758/jars"
-export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.5.0.1/jars"
-export EC2_URL="https://ec2.us-west-2.amazonaws.com"
-export EC2_KEYPAIR="$HOME/.ec2/dylan.pem"
-
+# Aliases
 alias sshpdx='ssh -p 8022 dylan@pdx01.petefowler.com'
 alias sshast='ssh dylan@pdx.petefowler.com'
 alias sshsc='ssh dylan@sc.petefowler.com'
 alias sshco='ssh dylan@co.petefowler.com'
 alias sshcol='ssh dylan@10.3.0.10'
 alias gi='gem install --no-ri --no-rdoc'
-alias e='mate'
-alias et='e app autotest config db features lib public spec vendor/plugins Rakefile Capfile Gemfile Gemfile.lock config.ru'
-#export AUTOFEATURE=true
+
+# Services
 alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pg_stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias devlog="tail -f log/development.log | grep -vE \"(^\s*$|asset)\""
 alias redis_start='redis-server /usr/local/etc/redis.conf'
 alias mongo_start='mongod run --config /usr/local/Cellar/mongodb/2.0.2-x86_64/mongod.conf'
+
+# RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
