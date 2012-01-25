@@ -16,7 +16,7 @@ export DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bundler osx rails3 ruby cap github brew pow rvm)
+plugins=(git bundler osx rails3 ruby cap github brew pow rbenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -24,7 +24,7 @@ source $ZSH/oh-my-zsh.sh
 # Set terminal to allow CTRL+S in vim
 stty -ixon
 
-export PATH=/usr/local/Cellar/python/2.7.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/.oh-my-zsh/tools
+export PATH=$HOME/.rbenv/bin:/usr/local/Cellar/python/2.7.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/.oh-my-zsh/tools
 
 # Aliases
 alias sshpdx='ssh -p 8022 dylan@pdx01.petefowler.com'
@@ -40,6 +40,4 @@ alias pg_stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias devlog="tail -f log/development.log | grep -vE \"(^\s*$|asset)\""
 alias redis_start='redis-server /usr/local/etc/redis.conf'
 alias mongo_start='mongod run --config /usr/local/Cellar/mongodb/2.0.2-x86_64/mongod.conf'
-
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+eval "$(rbenv init -)"
