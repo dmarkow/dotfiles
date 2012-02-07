@@ -16,7 +16,7 @@ export DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bundler osx rails3 ruby cap github brew pow rbenv)
+plugins=(git osx rails3 ruby cap github brew pow rbenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -25,6 +25,7 @@ source $ZSH/oh-my-zsh.sh
 stty -ixon
 
 export PATH=$HOME/.rbenv/bin:/usr/local/Cellar/python/2.7.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/.oh-my-zsh/tools
+export EDITOR=vim
 
 # Aliases
 alias sshpdx='ssh -p 8022 dylan@pdx01.petefowler.com'

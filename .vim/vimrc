@@ -234,6 +234,7 @@ function! RunNearestTest()
 endfunction
 map <leader>s :call RunTestFile()<cr>
 map <leader>S :call RunNearestTest()<cr>
+map <leader>A :call RunAllTests()<cr>
 map <leader>c :w\|:!cucumber --drb<cr>
 
 if &term =~ "xterm"
