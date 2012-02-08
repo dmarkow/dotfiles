@@ -21,12 +21,11 @@ set nolazyredraw
 set wildmenu
 set wildmode=longest,list
 set laststatus=2
-set cmdheight=2
+set cmdheight=1
 set backspace=indent,eol,start
 set whichwrap+=<,>,h,l,[,]
 set report=0
 set nostartofline
-set background=light
 command! W :w
 set showtabline=2
 set list
@@ -77,13 +76,6 @@ if &t_Co > 2 || has("gui_running")
         set guifont=Ubuntu\ Mono\ 11
     endif
 end
-if has("gui_running")
-    :set lines=100
-    :set columns=171
-    set go-=T
-    set go-=L
-    set go-=r
-endif
 :set t_Co=256
 :color solarized
 :set bg=dark
@@ -139,24 +131,6 @@ nnoremap <leader>' ""yls<c-r>={'"': "'", "'": '"'}[@"]<cr><esc>
 
 "test"
 
-map <leader>gr :topleft :split config/routes.rb<cr>
-function! ShowRoutes()
-    " Requires 'scratch' plugin
-    :topleft 100 :split __Routes__
-    " Make sure Vim doesn't write __Routes__ as a file
-    :set buftype=nofile
-    " Delete everything
-    :normal 1GdG
-    " Put routes output in buffer
-    :0r! rake -s routes
-    " Size window to number of lines (1 plus rake output length)
-    :exec ":normal " . line("$") . "_ "
-    " Move cursor to bottom
-    :normal 1GG
-    " Delete empty trailing line
-    :normal dd
-endfunction
-map <leader>gR :call ShowRoutes()<cr>
 nnoremap <leader><leader> <c-^>
 set winwidth=84
 " We have to have a winheight bigger than we want to set winminheight. But if
@@ -170,19 +144,6 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 nnoremap <c-n> :let &wh = (&wh == 999 ? 10 : 999)<CR><C-W>=
-function! ShowColors()
-    let num = 255
-    while num >= 0
-        exec 'hi col_'.num.' ctermbg='.num.' ctermfg=white'
-        exec 'syn match col_'.num.' "ctermbg='.num.':...." containedIn=ALL'
-        call append(0, 'ctermbg='.num.':....')
-        let num = num - 1
-    endwhile
-endfunction
-
-" let g:CommandTMaxHeight=20
-let g:syntastic_enable_signs=1
-let g:syntastic_quiet_warnings=1
 
 " Testing Functions
 function! RunTests(filename)
@@ -241,6 +202,7 @@ if &term =~ "xterm"
     let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
     let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
 endif
+
 map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
 map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
 map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
@@ -252,8 +214,6 @@ map <leader>gg :topleft 100 :split Gemfile<cr>
 map <leader>t :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>a :A<cr>
 map <leader>r :R<cr>
-" map <leader>s :!rspec %<cr>
-":call RunTests('spec')<cr>
 
 function! PromoteToLet()
   :normal! dd
