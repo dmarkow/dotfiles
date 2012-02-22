@@ -77,7 +77,7 @@ if &t_Co > 2 || has("gui_running")
     endif
 end
 :set t_Co=256
-:color solarized
+:color jellybeans+
 :set bg=dark
 :set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 :hi User1 term=inverse,bold cterm=inverse,bold ctermfg=red
