@@ -77,7 +77,6 @@ if &t_Co > 2 || has("gui_running")
     endif
 end
 :set t_Co=256
-:color jellybeans+
 :set bg=dark
 :set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 :hi User1 term=inverse,bold cterm=inverse,bold ctermfg=red
@@ -233,3 +232,4 @@ endfunction
 " Indent p tags
 autocmd FileType html,eruby if g:html_indent_tags !~ '\\|p\>' | let g:html_indent_tags .= '\|p\|li\|dt\|dd' | endif
 map <silent> <leader>y :<C-u>silent '<,'>w !pbcopy<CR>
+:colorscheme jellybeans+
