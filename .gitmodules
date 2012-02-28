@@ -52,3 +52,6 @@
 [submodule ".vim/bundle/vim-colors-solarized"]
 	path = .vim/bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule ".vim/bundle/scss-syntax.vim"]
+	path = .vim/bundle/scss-syntax.vim
+	url = https://github.com/cakebaker/scss-syntax.vim.git
