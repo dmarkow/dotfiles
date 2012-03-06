@@ -39,5 +39,5 @@ alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/ser
 alias pg_stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias devlog="tail -f log/development.log | grep -vE \"(^\s*$|asset)\""
 alias redis_start='redis-server /usr/local/etc/redis.conf'
-alias mongo_start='mongod run --config /usr/local/Cellar/mongodb/2.0.2-x86_64/mongod.conf'
+alias mongo_start='mongod run --config /usr/local/Cellar/mongodb/2.0.3-x86_64/mongod.conf'
 eval "$(rbenv init -)"
