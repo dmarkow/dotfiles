@@ -230,6 +230,6 @@ endfunction
 :map <leader>p :PromoteToLet<cr>
 
 " Indent p tags
-autocmd FileType html,eruby if g:html_indent_tags !~ '\\|p\>' | let g:html_indent_tags .= '\|p\|li\|dt\|dd' | endif
+autocmd FileType html,eruby if b:eruby_subtype != 'javascript' && g:html_indent_tags !~ '\\|p\>' | let g:html_indent_tags .= '\|p\|li\|dt\|dd' | endif
 map <silent> <leader>y :<C-u>silent '<,'>w !pbcopy<CR>
 :colorscheme jellybeans-dm
