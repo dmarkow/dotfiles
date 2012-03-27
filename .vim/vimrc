@@ -238,3 +238,8 @@ endfunction
 autocmd FileType html,eruby if b:eruby_subtype != 'javascript' && g:html_indent_tags !~ '\\|p\>' | let g:html_indent_tags .= '\|p\|li\|dt\|dd' | endif
 map <silent> <leader>y :<C-u>silent '<,'>w !pbcopy<CR>
 :colorscheme jellybeans-dm
+:colorscheme github
+
+" Convert a haml line to erb
+let @e='I<%A %>w'
+
