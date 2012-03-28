@@ -232,3 +232,8 @@ autocmd FileType html,eruby if b:eruby_subtype != 'javascript' && g:html_indent_
 map <leader>y "*y
 
 :colorscheme jellybeans-dm
+:colorscheme github
+
+" Convert a haml line to erb
+let @e='I<%A %>w'
+
