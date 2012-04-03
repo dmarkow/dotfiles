@@ -2,6 +2,7 @@
 	up = pull
 	co = checkout
 	st = status
+	b = branch
 [user]
 	name = Dylan Markow
 	email = dylan@dylanmarkow.com

@@ -126,11 +126,8 @@ function! RenameFile()
 endfunction
 map <leader>n :call RenameFile()<cr>
 
-nnoremap <leader>' ""yls<c-r>={'"': "'", "'": '"'}[@"]<cr><esc>
-
-"test"
-
 nnoremap <leader><leader> <c-^>
+
 set winwidth=84
 " We have to have a winheight bigger than we want to set winminheight. But if
 " we set winheight to be huge before winminheight, the winminheight set will
@@ -222,21 +219,18 @@ map <leader>r :R<cr>
 
 function! PromoteToLet()
   :normal! dd
-  " :exec '?^\s*it\>'
   :normal! P
   :.s/\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
   :normal ==
-  "         " :normal! <<
-  "           " :normal! ilet(:
-  "             " :normal! f 2cl) {
-  "               " :normal! A }
 endfunction
 :command! PromoteToLet :call PromoteToLet()
 :map <leader>p :PromoteToLet<cr>
 
 " Indent p tags
 autocmd FileType html,eruby if b:eruby_subtype != 'javascript' && g:html_indent_tags !~ '\\|p\>' | let g:html_indent_tags .= '\|p\|li\|dt\|dd' | endif
-map <silent> <leader>y :<C-u>silent '<,'>w !pbcopy<CR>
+" map <silent> <leader>y :<C-u>silent '<,'>w !pbcopy<CR>
+map <leader>y "*y
+
 :colorscheme jellybeans-dm
 :colorscheme github
 
