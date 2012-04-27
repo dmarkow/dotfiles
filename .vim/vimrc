@@ -232,6 +232,6 @@ autocmd FileType html,eruby if b:eruby_subtype != 'javascript' && g:html_indent_
 map <leader>y "*y
 
 :colorscheme jellybeans-dm
-:colorscheme github
+" :colorscheme github
 
 set timeoutlen=250
