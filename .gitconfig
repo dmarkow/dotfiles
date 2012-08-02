@@ -1,15 +1,22 @@
 [alias]
-	up = pull
-	co = checkout
-	st = status
-	b = branch
+  up = pull
+  co = checkout
+  st = status
+  b = branch
+  head = !git l -1
+  h = !git head
+  hp = "!source ~/dev/dotfiles/.githelpers && show_git_head"
+  r = !git l -30
+  ra = !git r --all
+  l = "!source ~/dev/dotfiles/.githelpers && pretty_git_log"
+  la = !git l --all
 [user]
 	name = Dylan Markow
 	email = dylan@dylanmarkow.com
 [color]
-	branch = auto
-	diff = auto
-	interactive = auto
-	status = auto
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
 [core]
-	editor = vim
+  editor = vim

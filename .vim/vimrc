@@ -235,3 +235,7 @@ map <leader>y "*y
 " :colorscheme github
 
 set timeoutlen=250
+
+" Prevent Vim from clobbering the scrollback buffer. See
+" http://www.shallowsky.com/linux/noaltscreen.html
+set t_ti= t_te=
