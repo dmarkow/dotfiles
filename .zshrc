@@ -34,6 +34,7 @@ alias sshco='ssh dylan@co.petefowler.com'
 alias sshcol='ssh dylan@10.3.0.10'
 alias gi='gem install --no-ri --no-rdoc'
 alias e='subl'
+alias speedtest='wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip'
 
 # Services
 alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
