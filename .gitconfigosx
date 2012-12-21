@@ -3,24 +3,34 @@
   co = checkout
   st = status
   b = branch
+
+  # Fancy logging.
+  # h = head
+  # hp = head with patch
+  # r = recent commits, only current branch
+  # ra = recent commits, all reachable refs
+  # l = all commits, only current branch
+  # la = all commits, all reachable refs
   head = !git l -1
   h = !git head
-  hp = "!source ~/dev/dotfiles/.githelpers && show_git_head"
+  hp = "!. ~/.githelpers && show_git_head"
   r = !git l -30
   ra = !git r --all
-  l = "!source ~/dev/dotfiles/.githelpers && pretty_git_log"
+  l = "!. ~/.githelpers && pretty_git_log"
   la = !git l --all
+
 [user]
-	name = Dylan Markow
-	email = dylan@dylanmarkow.com
+  name = Dylan Markow
+  email = dylan@dylanmarkow.com
 [color]
   branch = auto
   diff = auto
   interactive = auto
   status = auto
+  ui = auto
 [core]
   editor = vim
 [push]
-	default = matching
+  default = matching
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
