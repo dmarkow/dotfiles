@@ -20,8 +20,8 @@
   la = !git l --all
 
 [user]
-  name = Dylan Markow
-  email = dylan@dylanmarkow.com
+	name = Dylan Markow
+	email = dylan@dylanmarkow.com
 [color]
   branch = auto
   diff = auto
