@@ -65,19 +65,25 @@ set shiftwidth=2
 set expandtab
 set nosmarttab
 set nomodeline
-if &t_Co > 2 || has("gui_running")
-    syntax on
-    set hlsearch
-    if has("gui_macvim")
-        set guifont=Consolas:h13
-        " set guifont=Inconsolata:h15
-        " set guifont=Monaco:h11
-    else
-        set guifont=Ubuntu\ Mono\ 11
-    endif
-end
+syntax on
+set hlsearch
+
+"""""""""""""""""""""""""""
+" COLOR
+"""""""""""""""""""""""""""
 :set t_Co=256
-:set bg=dark
+:color Tomorrow
+
+" :set bg=dark
+" :colorscheme jellybeans-dm
+" :colorscheme github
+" let g:solarized_termtrans=1
+" set background=light
+" colorscheme solarized"
+
+"""""""""""""""""""""""""""
+" STATUS LINE
+"""""""""""""""""""""""""""
 :set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 :hi User1 term=inverse,bold cterm=inverse,bold ctermfg=red
 
@@ -231,8 +237,6 @@ autocmd FileType html,eruby if b:eruby_subtype != 'javascript' && g:html_indent_
 " map <silent> <leader>y :<C-u>silent '<,'>w !pbcopy<CR>
 map <leader>y "*y
 
-:colorscheme jellybeans-dm
-" :colorscheme github
 
 set timeoutlen=250
 

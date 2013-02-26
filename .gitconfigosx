@@ -34,3 +34,5 @@
   default = matching
 [credential]
   helper = osxkeychain
+[pull]
+	rebase = true
