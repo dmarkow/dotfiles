@@ -38,6 +38,7 @@ alias gi='gem install --no-ri --no-rdoc'
 alias e='subl'
 alias speedtest='wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip'
 alias l='ll'
+alias df='df -h'
 
 # Services
 alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
