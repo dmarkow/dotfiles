@@ -33,13 +33,14 @@ alias sshast='ssh dylan@pdx.petefowler.com'
 alias sshsc='ssh dylan@sc.petefowler.com'
 alias sshco='ssh dylan@co.petefowler.com'
 alias sshcol='ssh dylan@10.3.0.10'
+alias sshbackup='ssh 10.2.0.11'
 alias sshec2='ssh -i ~/Dropbox/dmarkow.pem ec2.petefowler.com'
 alias gi='gem install --no-ri --no-rdoc'
 alias e='subl'
 alias speedtest='wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip'
 alias l='ll'
 alias df='df -h'
-
+export LS_COLORS="ow=01;91:"
 # Services
 alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pg_stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
