@@ -40,6 +40,7 @@ alias e='subl'
 alias speedtest='wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip'
 alias l='ll'
 alias df='df -h'
+alias sudo='nocorrect sudo'
 export LS_COLORS="ow=01;91:"
 # Services
 alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
