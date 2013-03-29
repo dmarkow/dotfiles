@@ -24,7 +24,7 @@ source $ZSH/oh-my-zsh.sh
 # Set terminal to allow CTRL+S in vim
 stty -ixon
 
-export PATH=$HOME/.rbenv/bin:/usr/local/share/npm/bin:/usr/local/Cellar/python/2.7.3/bin:/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/.oh-my-zsh/tools
+export PATH=./bin:$HOME/.rbenv/bin:/usr/local/share/npm/bin:/usr/local/Cellar/python/2.7.3/bin:/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/.oh-my-zsh/tools
 export EDITOR=vim
 
 # Aliases
