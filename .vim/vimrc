@@ -72,7 +72,7 @@ set hlsearch
 " COLOR
 """""""""""""""""""""""""""
 :set t_Co=256
-:color Tomorrow
+:color Tomorrow-Night
 
 " :set bg=dark
 " :colorscheme jellybeans-dm
