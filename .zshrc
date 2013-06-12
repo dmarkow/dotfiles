@@ -52,4 +52,4 @@ alias rdbm='rake db:migrate db:test:clone_structure'
 eval "$(rbenv init -)"
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="/usr/local/heroku/bin:/Applications/Vagrant/bin:$PATH"
