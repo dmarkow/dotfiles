@@ -41,6 +41,8 @@ alias speedtest='wget --output-document=/dev/null http://speedtest.wdc01.softlay
 alias l='ll'
 alias df='df -h'
 alias sudo='nocorrect sudo'
+alias rs='bin/rails s'
+alias rc='bin/rails c'
 export LS_COLORS="ow=01;91:"
 # Services
 alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
