@@ -163,14 +163,14 @@ function! RunTests(filename)
         if filereadable("script/test")
             exec ":!script/test " . a:filename
         else
-            exec ":!rspec --color " . a:filename
+            exec ":!spring rspec --color " . a:filename
         end
     end
 endfunction
 
 function! RunAllTests()
     :w
-    exec ":!rspec spec"
+    exec ":!spring rspec spec"
 endfunction
 
 
@@ -211,15 +211,22 @@ if &term =~ "xterm"
     let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
 endif
 
-map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
-map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
-map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
-map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
-map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
-map <leader>gs :CommandTFlush<cr>\|:CommandT spec<cr>
+map <leader>gv :CtrlP app/views<cr>
+map <leader>gc :CtrlP app/controllers<cr>
+map <leader>gm :CtrlP app/models<cr>
+map <leader>gh :CtrlP app/helpers<cr>
+map <leader>gl :CtrlP lib<cr>
+map <leader>gs :CtrlP spec<cr>
+" map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
+" map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
+" map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
+" map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
+" map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
+" map <leader>gs :CommandTFlush<cr>\|:CommandT spec<cr>
 map <leader>gg :topleft 100 :split Gemfile<cr>
 
-map <leader>t :CommandTFlush<cr>\|:CommandT<cr>
+map <leader>e :CommandTFlush<cr>\|:CommandT<cr>
+map <leader>t :CtrlP<cr>
 map <leader>a :A<cr>
 map <leader>r :R<cr>
 
@@ -244,3 +251,5 @@ set timeoutlen=250
 " http://www.shallowsky.com/linux/noaltscreen.html
 set t_ti= t_te=
 let g:ackprg = 'ag --nogroup --nocolor --column'
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+set wildignore+=*/tmp/*,*.log,*.swp,*.zip
