@@ -4,6 +4,7 @@ ZSH=$HOME/.oh-my-zsh
 # Set to the name theme to load.
 # Look in ~/.oh-my-zsh/themes/
 ZSH_THEME="simple"
+
 # ZSH_THEME="random"
 
 # Set to this to use case-sensitive completion
@@ -20,6 +21,7 @@ ZSH_THEME="simple"
 plugins=(git osx rails3 ruby cap github brew pow rbenv)
 
 source $ZSH/oh-my-zsh.sh
+export PROMPT='%{$fg[green]%}%m %~%{$fg_bold[blue]%}$(git_prompt_info)%{$reset_color%} '
 
 # Customize to your needs...
 # Set terminal to allow CTRL+S in vim
