@@ -239,9 +239,9 @@ endfunction
 :command! PromoteToLet :call PromoteToLet()
 :map <leader>p :PromoteToLet<cr>
 
-" Indent p tags
-autocmd FileType html,eruby if b:eruby_subtype != 'javascript' && g:html_indent_tags !~ '\\|p\>' | let g:html_indent_tags .= '\|p\|li\|dt\|dd' | endif
-" map <silent> <leader>y :<C-u>silent '<,'>w !pbcopy<CR>
+" " Indent p tags
+" autocmd FileType html,eruby if b:eruby_subtype != 'javascript' && g:html_indent_tags !~ '\\|p\>' | let g:html_indent_tags .= '\|p\|li\|dt\|dd' | endif
+" " map <silent> <leader>y :<C-u>silent '<,'>w !pbcopy<CR>
 map <leader>y "*y
 
 
