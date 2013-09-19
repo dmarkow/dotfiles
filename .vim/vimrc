@@ -72,7 +72,7 @@ set hlsearch
 " COLOR
 """""""""""""""""""""""""""
 :set t_Co=256
-:color jellybeans
+:color jellybeans-dm
 
 " :set bg=dark
 " :colorscheme jellybeans-dm
