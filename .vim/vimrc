@@ -253,3 +253,9 @@ set t_ti= t_te=
 let g:ackprg = 'ag --nogroup --nocolor --column'
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 set wildignore+=*/tmp/*,*.log,*.swp,*.zip
+
+" Folding
+inoremap <F9> <C-O>za
+nnoremap <F9> za
+onoremap <F9> <C-C>za
+vnoremap <F9> zf

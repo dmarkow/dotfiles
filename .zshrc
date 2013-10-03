@@ -60,6 +60,7 @@ alias sudo='nocorrect sudo'
 alias rs='bin/rails s'
 alias rc='bin/rails c'
 alias rdb='bin/rails db'
+alias rdbu='rake db:update'
 export LS_COLORS="ow=01;91:"
 # Services
 alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
