@@ -63,13 +63,11 @@ alias rdb='bin/rails db'
 alias rdbu='rake db:update'
 export LS_COLORS="ow=01;91:"
 # Services
-alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
-alias pg_stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias devlog="tail -f log/development.log | grep -vE \"(^\s*$|asset)\""
-alias redis_start='redis-server /usr/local/etc/redis.conf'
-alias mongo_start='mongod run --config /usr/local/Cellar/mongodb/2.0.3-x86_64/mongod.conf'
+alias cpd="cap production deploy"
 alias rdbm='rake db:migrate db:test:clone_structure'
-export PATH=$HOME/.rbenv/bin:/usr/local/share/npm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/.oh-my-zsh/tools
+export GOPATH=$HOME/dev/go
+export PATH=$GOPATH/bin:$HOME/.rbenv/bin:/usr/local/share/npm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/.oh-my-zsh/tools
 eval "$(rbenv init -)"
 
 ### Added by the Heroku Toolbelt

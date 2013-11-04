@@ -72,7 +72,8 @@ set hlsearch
 " COLOR
 """""""""""""""""""""""""""
 :set t_Co=256
-:color jellybeans-dm
+" :color jellybeans-dm
+:color Tomorrow
 
 " :set bg=dark
 " :colorscheme jellybeans-dm
@@ -163,14 +164,14 @@ function! RunTests(filename)
         if filereadable("script/test")
             exec ":!script/test " . a:filename
         else
-            exec ":!spring rspec --color " . a:filename
+            exec ":!rspec --color " . a:filename
         end
     end
 endfunction
 
 function! RunAllTests()
     :w
-    exec ":!spring rspec spec"
+    exec ":!rspec spec"
 endfunction
 
 
@@ -259,3 +260,21 @@ inoremap <F9> <C-O>za
 nnoremap <F9> za
 onoremap <F9> <C-C>za
 vnoremap <F9> zf
+
+
+
+" Run a given vim command on the results of fuzzy selecting from a given shell
+" command. See usage below.
+function! SelectaCommand(choice_command, vim_command)
+  try
+    silent! exec a:vim_command . " " . system(a:choice_command . " | selecta")
+  catch /Vim:Interrupt/
+    " Swallow the ^C so that the redraw below happens; otherwise there will be
+    " leftovers from selecta on the screen
+  endtry
+  redraw!
+endfunction
+
+" Find all files in all non-dot directories starting in the working directory.
+" Fuzzy select one of those. Open the selected file with :e.
+map <leader>f :call SelectaCommand("find * -type f", ":e")<cr>

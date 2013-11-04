@@ -11,9 +11,10 @@ if has("gui_macvim")
   vmap <D-]> >gv
   vmap <D-[> <gv
 
-  set bg=dark
+  " set bg=dark
   set guioptions-=L
   set guioptions-=r
   set guioptions-=T
+  color Tomorrow-Night
 endif
 
