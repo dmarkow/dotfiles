@@ -18,7 +18,7 @@ ZSH_THEME="simple"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx rails3 ruby cap github brew pow rbenv)
+plugins=(git osx rails ruby cap github brew rbenv)
 
 source $ZSH/oh-my-zsh.sh
 export PROMPT='%{$fg[green]%}%m %~%{$fg_bold[blue]%}$(git_prompt_info)%{$reset_color%} '
@@ -44,6 +44,7 @@ function marks {
 }
 
 # Aliases
+alias be='bundle exec'
 alias sshpdx='sshec2'
 alias sshast='ssh dylan@pdx.petefowler.com'
 alias sshsc='ssh dylan@sc.petefowler.com'

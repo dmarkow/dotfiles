@@ -213,6 +213,7 @@ if &term =~ "xterm"
 endif
 
 map <leader>gv :CtrlP app/views<cr>
+map <leader>gj :CtrlP app/assets/javascripts<cr>
 map <leader>gc :CtrlP app/controllers<cr>
 map <leader>gm :CtrlP app/models<cr>
 map <leader>gh :CtrlP app/helpers<cr>
