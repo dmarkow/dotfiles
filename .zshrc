@@ -45,6 +45,7 @@ function marks {
 }
 
 # Aliases
+alias fs="foreman start"
 alias be='bundle exec'
 alias sshpdx='sshec2'
 alias sshast='ssh dylan@pdx.petefowler.com'
