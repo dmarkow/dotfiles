@@ -4,8 +4,7 @@ ZSH=$HOME/.oh-my-zsh
 # Set to the name theme to load.
 # Look in ~/.oh-my-zsh/themes/
 ZSH_THEME="simple"
-
-# ZSH_THEME="random"
+ZSH_THEME="agnoster"
 
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
@@ -18,16 +17,16 @@ ZSH_THEME="simple"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx rails ruby cap github brew rbenv)
+plugins=(git osx rails ruby github brew rbenv)
 
 source $ZSH/oh-my-zsh.sh
-export PROMPT='%{$fg[green]%}%m %~%{$fg_bold[blue]%}$(git_prompt_info)%{$reset_color%} '
+# export PROMPT='%{$fg[green]%}%m %~%{$fg_bold[blue]%}$(git_prompt_info)%{$reset_color%} '
 
 # Customize to your needs...
 # Set terminal to allow CTRL+S in vim
 stty -ixon
 
-export EDITOR=vim
+export EDITOR=subl
 
 export MARKPATH=$HOME/.marks
 function jump {
@@ -49,11 +48,10 @@ alias fs="foreman start"
 alias be='bundle exec'
 alias sshpdx='sshec2'
 alias sshast='ssh dylan@pdx.petefowler.com'
+alias sshastl='ssh 10.2.0.10'
 alias sshsc='ssh dylan@sc.petefowler.com'
-alias sshco='ssh dylan@co.petefowler.com'
-alias sshcol='ssh dylan@10.3.0.10'
-alias sshbackup='ssh 10.2.0.11'
-alias sshec2='ssh -i ~/Dropbox/dmarkow.pem ec2.petefowler.com'
+alias sshscl='ssh 10.1.0.10'
+alias sshec2='ssh ec2-2.petefowler.com'
 alias gi='gem install --no-ri --no-rdoc'
 alias e='subl'
 alias speedtest='wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip'
@@ -68,11 +66,10 @@ export LS_COLORS="ow=01;91:"
 # Services
 alias devlog="tail -f log/development.log | grep -vE \"(^\s*$|asset)\""
 alias cpd="cap production deploy"
-alias rdbm='rake db:migrate db:test:clone_structure'
+alias rdbm='rake db:migrate db:test:prepare'
 export GOPATH=$HOME/dev/go
-export PATH=$GOPATH/bin:$HOME/.rbenv/bin:/usr/local/share/npm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/.oh-my-zsh/tools
+export PATH=$GOPATH/bin:$HOME/.rbenv/bin:/usr/local/share/npm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/.oh-my-zsh/tools:$PATH
 eval "$(rbenv init -)"
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:/Applications/Vagrant/bin:$PATH"
 export PATH="./bin:$PATH"

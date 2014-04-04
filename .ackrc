@@ -2,4 +2,3 @@
 --type-add=ruby=.haml
 --type-add=coffeescript=.coffee
 --type-add=css=.scss
---nobin

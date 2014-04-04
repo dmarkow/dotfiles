@@ -73,7 +73,7 @@ set hlsearch
 """""""""""""""""""""""""""
 :set t_Co=256
 " :color jellybeans-dm
-:color Tomorrow
+:color Tomorrow-Night
 
 " :set bg=dark
 " :colorscheme jellybeans-dm
@@ -279,3 +279,5 @@ endfunction
 " Find all files in all non-dot directories starting in the working directory.
 " Fuzzy select one of those. Open the selected file with :e.
 map <leader>f :call SelectaCommand("find * -type f", ":e")<cr>
+let g:gitgutter_sign_column_always = 1
+let g:gitgutter_realtime = 1
