@@ -69,7 +69,7 @@ alias cpd="cap production deploy"
 alias rdbm='rake db:migrate db:test:prepare'
 export GOPATH=$HOME/dev/go
 export PATH=$GOPATH/bin:$HOME/.rbenv/bin:/usr/local/share/npm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/.oh-my-zsh/tools:$PATH
-eval "$(rbenv init -)"
+[[ -d ~/.rbenv ]] && eval "$(rbenv init -)"
 
 ### Added by the Heroku Toolbelt
 export PATH="./bin:$PATH"
