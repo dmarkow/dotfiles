@@ -4,7 +4,7 @@ filetype plugin indent on
 
 let mapleader=","
 let g:mapleader=","
-
+let g:ctrlp_custom_ignore = "node_modules"
 if has("autocmd")
     "au BufWritePost .vimrc source $MYVIMRC
 endif
@@ -72,16 +72,9 @@ set hlsearch
 " COLOR
 """""""""""""""""""""""""""
 :set t_Co=256
-" :color jellybeans-dm
-:color Tomorrow-Night
-
-" :set bg=dark
-" :colorscheme jellybeans-dm
-" :colorscheme github
-" let g:solarized_termtrans=1
-" set background=light
-" colorscheme solarized"
-
+:color base16-ocean
+let g:powerline_config_overrides = {"colorscheme": "base16"}
+let g:Powerline_colorscheme = 'base16'
 """""""""""""""""""""""""""
 " STATUS LINE
 """""""""""""""""""""""""""

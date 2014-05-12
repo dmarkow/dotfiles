@@ -66,10 +66,7 @@ export LS_COLORS="ow=01;91:"
 # Services
 alias devlog="tail -f log/development.log | grep -vE \"(^\s*$|asset)\""
 alias cpd="cap production deploy"
-alias rdbm='rake db:migrate db:test:prepare'
-export GOPATH=$HOME/dev/go
-export PATH=$GOPATH/bin:$HOME/.rbenv/bin:/usr/local/share/npm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/.oh-my-zsh/tools:$PATH
+alias rdbm='rake db:migrate' # db:test:prepare'
 [[ -d ~/.rbenv ]] && eval "$(rbenv init -)"
-
-### Added by the Heroku Toolbelt
-export PATH="./bin:$PATH"
+export GOPATH=$HOME/dev/go
+export PATH="./bin:$PATH:$GOPATH/bin"
