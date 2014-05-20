@@ -4,7 +4,6 @@ filetype plugin indent on
 
 let mapleader=","
 let g:mapleader=","
-let g:ctrlp_custom_ignore = "node_modules"
 if has("autocmd")
     "au BufWritePost .vimrc source $MYVIMRC
 endif
@@ -212,6 +211,7 @@ map <leader>gm :CtrlP app/models<cr>
 map <leader>gh :CtrlP app/helpers<cr>
 map <leader>gl :CtrlP lib<cr>
 map <leader>gs :CtrlP spec<cr>
+map <leader>ge :CtrlP ember<cr>
 " map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
 " map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
 " map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
@@ -274,3 +274,7 @@ endfunction
 map <leader>f :call SelectaCommand("find * -type f", ":e")<cr>
 let g:gitgutter_sign_column_always = 1
 let g:gitgutter_realtime = 1
+set dir=~/.vimswap//,/tmp//,.
+let g:ctrlp_custom_ignore = {
+  \ 'dir': 'node_modules\|ember/vendor'
+  \ }

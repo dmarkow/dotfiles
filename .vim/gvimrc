@@ -1,5 +1,6 @@
 if has("gui_macvim")
-  set guifont=Sauce\ Code\ Powerline:h14
+  set guifont=Source\ Code\ Pro:h14
+  set guifont=Inconsolata-G:h14
   macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
   macmenu File.New\ Tab key=<D-T>
   map <D-t> :CtrlP<cr>
@@ -15,6 +16,9 @@ if has("gui_macvim")
   set guioptions-=L
   set guioptions-=r
   set guioptions-=T
-  color Tomorrow-Night
+  set showtabline=0
+  colors base16-ocean
+  set bg=dark
+
 endif
 
