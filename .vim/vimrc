@@ -198,11 +198,6 @@ map <leader>S :call RunNearestTest()<cr>
 map <leader>A :call RunAllTests()<cr>
 map <leader>c :w\|:!cucumber --drb<cr>
 
-if &term =~ "xterm"
-    let g:CommandTCancelMap = ['<ESC>', '<C-c>']
-    let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
-    let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
-endif
 
 map <leader>gv :CtrlP app/views<cr>
 map <leader>gj :CtrlP app/assets/javascripts<cr>
@@ -212,15 +207,8 @@ map <leader>gh :CtrlP app/helpers<cr>
 map <leader>gl :CtrlP lib<cr>
 map <leader>gs :CtrlP spec<cr>
 map <leader>ge :CtrlP ember<cr>
-" map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
-" map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
-" map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
-" map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
-" map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
-" map <leader>gs :CommandTFlush<cr>\|:CommandT spec<cr>
 map <leader>gg :topleft 100 :split Gemfile<cr>
 
-map <leader>e :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>t :CtrlP<cr>
 map <leader>a :A<cr>
 map <leader>r :R<cr>
