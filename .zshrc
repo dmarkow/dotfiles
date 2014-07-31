@@ -3,8 +3,9 @@ ZSH=$HOME/.oh-my-zsh
 
 # Set to the name theme to load.
 # Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="simple"
+ZSH_THEME="dstufft"
 ZSH_THEME="agnoster"
+# ZSH_THEME="random"
 
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
@@ -70,3 +71,4 @@ alias rdbm='rake db:migrate' # db:test:prepare'
 [[ -d ~/.rbenv ]] && eval "$(rbenv init -)"
 export GOPATH=$HOME/dev/go
 export PATH="./bin:$PATH:$GOPATH/bin"
+export SOURCE_ANNOTATION_DIRECTORIES='spec'
