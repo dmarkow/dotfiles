@@ -1,3 +1,7 @@
+if [ -f /etc/profile ]; then
+  PATH=""
+  source /etc/profile
+fi
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
