@@ -1,6 +1,8 @@
-if [ -f /etc/profile ]; then
-  PATH=""
-  source /etc/profile
+if [ -d /Users/dylan ]; then
+  if [ -f /etc/profile ]; then
+    PATH=""
+    source /etc/profile
+  fi
 fi
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
