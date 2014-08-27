@@ -156,7 +156,11 @@ function! RunTests(filename)
         if filereadable("script/test")
             exec ":!script/test " . a:filename
         else
+          if has("gui_macvim")
             exec ":!rspec --no-color " . a:filename
+          else
+            exec ":!rspec " . a:filename
+          end
         end
     end
 endfunction
@@ -265,5 +269,5 @@ let g:gitgutter_sign_column_always = 1
 let g:gitgutter_realtime = 1
 set dir=~/.vimswap//,/tmp//,.
 let g:ctrlp_custom_ignore = {
-  \ 'dir': 'node_modules\|ember/vendor'
+  \ 'dir': 'node_modules\|ember/vendor\|build'
   \ }
