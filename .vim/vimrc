@@ -168,7 +168,11 @@ endfunction
 
 function! RunAllTests()
     :w
-    exec ":!rspec spec"
+    if has("gui_macvim")
+      exec ":!rspec spec --no-color"
+    else
+      exec ":!rspec spec"
+    endif
 endfunction
 
 
@@ -240,6 +244,7 @@ set timeoutlen=250
 " http://www.shallowsky.com/linux/noaltscreen.html
 set t_ti= t_te=
 let g:ackprg = 'ag --nogroup --nocolor --column'
+let g:ack_autoclose=1
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 set wildignore+=*/tmp/*,*.log,*.swp,*.zip
 
@@ -270,5 +275,8 @@ let g:gitgutter_sign_column_always = 1
 let g:gitgutter_realtime = 1
 set dir=~/.vimswap//,/tmp//,.
 let g:ctrlp_custom_ignore = {
-  \ 'dir': 'node_modules\|ember/vendor\|build'
+  \ 'dir': 'node_modules\|bower_components\|ember/vendor\|build'
   \ }
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_liststyle=3

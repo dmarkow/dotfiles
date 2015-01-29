@@ -17,7 +17,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 # Save to disk (not to iCloud) by default
-defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+# defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
@@ -26,7 +26,7 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 
 # Check for software updates daily, not just once per week
-defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+# defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
 ###############################################################################
 # SSD-specific tweaks                                                         #

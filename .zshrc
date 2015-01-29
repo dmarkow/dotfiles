@@ -54,11 +54,10 @@ function marks {
 alias fs="foreman start"
 alias be='bundle exec'
 alias sshpdx='sshec2'
-alias sshast='ssh dylan@pdx.petefowler.com'
-alias sshastl='ssh 10.2.0.10'
 alias sshsc='ssh dylan@sc.petefowler.com'
 alias sshscl='ssh 10.1.0.10'
 alias sshec2='ssh ec2-2.petefowler.com'
+alias sshdfw='ssh 192.168.1.142'
 alias gi='gem install --no-ri --no-rdoc'
 alias e='subl'
 alias speedtest='wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip'
@@ -76,5 +75,8 @@ alias cpd="cap production deploy"
 alias rdbm='rake db:migrate' # db:test:prepare'
 [[ -d ~/.rbenv ]] && eval "$(rbenv init -)"
 export GOPATH=$HOME/dev/go
-export PATH="./bin:$PATH:$GOPATH/bin"
+export PATH="./bin:/usr/local/bin:$PATH:$GOPATH/bin"
 export SOURCE_ANNOTATION_DIRECTORIES='spec'
+export RUBYMOTION_ANDROID_SDK=~/dev/android-rubymotion/sdk
+export RUBYMOTION_ANDROID_NDK=~/dev/android-rubymotion/ndk
+
