@@ -72,7 +72,7 @@ export LS_COLORS="ow=01;91:"
 # Services
 alias devlog="tail -f log/development.log | grep -vE \"(^\s*$|asset)\""
 alias cpd="cap production deploy"
-alias rdbm='rake db:migrate' # db:test:prepare'
+alias rdbm='rake db:migrate db:test:prepare'
 [[ -d ~/.rbenv ]] && eval "$(rbenv init -)"
 export GOPATH=$HOME/dev/go
 export PATH="./bin:/usr/local/bin:$PATH:$GOPATH/bin"
