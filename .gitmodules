@@ -66,3 +66,9 @@
 [submodule ".vim/bundle/mustache"]
 	path = .vim/bundle/mustache
 	url = git://github.com/mustache/vim-mustache-handlebars.git
+[submodule ".vim/bundle/FastFold"]
+	path = .vim/bundle/FastFold
+	url = https://github.com/Konfekt/FastFold.git
+[submodule ".vim/bundle/vim-jsx"]
+	path = .vim/bundle/vim-jsx
+	url = https://github.com/mxw/vim-jsx.git
