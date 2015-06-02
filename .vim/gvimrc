@@ -21,6 +21,7 @@ if has("gui_macvim")
   set showtabline=0
   colors base16-tomorrow
   set bg=dark
+  " colors github
 
 endif
 
