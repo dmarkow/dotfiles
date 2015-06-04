@@ -22,18 +22,14 @@ NeoBundle 'mileszs/ack.vim'
 NeoBundle 'michaeljsmith/vim-indent-object'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'ervandew/supertab'
-NeoBundle 'msanders/snipmate.vim'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'wgibbs/vim-irblack'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'tpope/vim-commentary'
-NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'tpope/vim-ragtag'
 NeoBundle 'vim-scripts/Colour-Sampler-Pack'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'airblade/vim-gitgutter'
@@ -46,10 +42,10 @@ NeoBundle 'mxw/vim-jsx'
 " NeoBundle 'Shougo/neosnippet-snippets'
 " NeoBundle 'tpope/vim-fugitive'
 " NeoBundle 'ctrlpvim/ctrlp.vim'
-" NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'flazz/vim-colorschemes'
 
 " You can specify revision/branch/tag.
-NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+" NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 
 " Required:
 call neobundle#end()
