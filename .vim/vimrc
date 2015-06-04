@@ -1,6 +1,68 @@
-set nocompatible
-call pathogen#infect()
+"NeoBundle Scripts-----------------------------
+if has('vim_starting')
+  if &compatible
+    set nocompatible               " Be iMproved
+  endif
+
+  " Required:
+  set runtimepath+=/Users/dylan/.vim/bundle/neobundle.vim/
+endif
+
+" Required:
+call neobundle#begin(expand('/Users/dylan/.vim/bundle'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+"
+" Add or remove your Bundles here:
+NeoBundle 'chriskempson/base16-vim'
+NeoBundle 'mileszs/ack.vim'
+NeoBundle 'michaeljsmith/vim-indent-object'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'ervandew/supertab'
+NeoBundle 'msanders/snipmate.vim'
+NeoBundle 'tpope/vim-endwise'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'wgibbs/vim-irblack'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'tpope/vim-markdown'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'tpope/vim-commentary'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'cakebaker/scss-syntax.vim'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'tpope/vim-ragtag'
+NeoBundle 'vim-scripts/Colour-Sampler-Pack'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'chriskempson/base16-vim'
+NeoBundle 'mustache/vim-mustache-handlebars'
+NeoBundle 'Konfekt/FastFold'
+NeoBundle 'mxw/vim-jsx'
+
+" NeoBundle 'Shougo/neosnippet.vim'
+" NeoBundle 'Shougo/neosnippet-snippets'
+" NeoBundle 'tpope/vim-fugitive'
+" NeoBundle 'ctrlpvim/ctrlp.vim'
+" NeoBundle 'flazz/vim-colorschemes'
+
+" You can specify revision/branch/tag.
+NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+
+" Required:
+call neobundle#end()
+
+" Required:
 filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+"End NeoBundle Scripts-------------------------set nocompatible
+
+" call pathogen#infect()
 
 let mapleader=","
 let g:mapleader=","

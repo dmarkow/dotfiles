@@ -1,0 +1,2 @@
+3.0
+{'vimshell': {'checked_time': 1433439125, 'installed_uri': 'https://github.com/Shougo/vimshell.git', 'installed_path': '/Users/dylan/.vim/bundle/vimshell_3787e5', 'revisions': {'1317805056': '3787e52766812d8b99a93ccdda57517bc2a0bab6'}, 'updated_time': '1317805056'}, 'neobundle.vim': {'checked_time': 1433439123, 'installed_uri': 'https://github.com/Shougo/neobundle.vim.git', 'installed_path': '/Users/dylan/.vim/bundle/neobundle.vim', 'revisions': {}, 'updated_time': 1433439123}}
