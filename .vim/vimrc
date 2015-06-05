@@ -24,6 +24,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'ervandew/supertab'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'kchmck/vim-coffee-script'
@@ -37,6 +38,7 @@ NeoBundle 'chriskempson/base16-vim'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'Konfekt/FastFold'
 NeoBundle 'mxw/vim-jsx'
+NeoBundle 'elixir-lang/vim-elixir'
 
 " NeoBundle 'Shougo/neosnippet.vim'
 " NeoBundle 'Shougo/neosnippet-snippets'
@@ -183,6 +185,7 @@ function! RenameFile()
     endif
 endfunction
 map <leader>n :call RenameFile()<cr>
+map <leader><tab> :NERDTree<cr>
 
 nnoremap <leader><leader> <c-^>
 
@@ -324,6 +327,8 @@ set dir=~/.vimswap//,/tmp//,.
 let g:ctrlp_custom_ignore = {
   \ 'dir': 'node_modules\|bower_components\|ember/vendor\|build'
   \ }
+let g:ctrlp_working_path_mode = ''
+
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_liststyle=3

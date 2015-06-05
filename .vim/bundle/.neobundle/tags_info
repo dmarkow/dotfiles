@@ -4,11 +4,13 @@ ack.vim
 base16-vim
 ctrlp.vim
 neobundle.vim
+nerdtree
 scss-syntax.vim
 supertab
 vim-coffee-script
 vim-colorschemes
 vim-commentary
+vim-elixir
 vim-endwise
 vim-fugitive
 vim-gitgutter
