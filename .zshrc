@@ -68,6 +68,7 @@ alias rs='bin/rails s'
 alias rc='bin/rails c'
 alias rdb='bin/rails db'
 alias rdbu='rake db:update'
+unalias grb
 export LS_COLORS="ow=01;91:"
 # Services
 alias devlog="tail -f log/development.log | grep -vE \"(^\s*$|asset)\""

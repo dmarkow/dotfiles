@@ -19,7 +19,7 @@ if has("gui_macvim")
   set guioptions-=r
   set guioptions-=T
   set showtabline=0
-  colors base16-tomorrow
+  colors base16-harmonic16
   set bg=dark
   " colors github
 
