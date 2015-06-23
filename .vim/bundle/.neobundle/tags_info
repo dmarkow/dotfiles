@@ -19,5 +19,6 @@ vim-javascript
 vim-jsx
 vim-markdown
 vim-mustache-handlebars
+vim-rails
 vim-ruby
 vim-surround
