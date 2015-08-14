@@ -10,8 +10,6 @@ ZSH=$HOME/.oh-my-zsh
 # Set to the name theme to load.
 # Look in ~/.oh-my-zsh/themes/
 ZSH_THEME="dstufft"
-ZSH_THEME="agnoster"
-# ZSH_THEME="random"
 
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
