@@ -77,6 +77,5 @@ export GOPATH=$HOME/dev/go
 export SOURCE_ANNOTATION_DIRECTORIES='spec'
 export RUBYMOTION_ANDROID_SDK=~/dev/android-rubymotion/sdk
 export RUBYMOTION_ANDROID_NDK=~/dev/android-rubymotion/ndk
-export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="./bin:/usr/local/bin:$PATH:$GOPATH/bin"
