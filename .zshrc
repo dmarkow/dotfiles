@@ -77,5 +77,8 @@ export GOPATH=$HOME/dev/go
 export SOURCE_ANNOTATION_DIRECTORIES='spec'
 export RUBYMOTION_ANDROID_SDK=~/dev/android-rubymotion/sdk
 export RUBYMOTION_ANDROID_NDK=~/dev/android-rubymotion/ndk
+export HOMEBREW_GITHUB_API_TOKEN=677723813443fbf8fd315a078c2e42142d792b06
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="./bin:/usr/local/bin:$PATH:$GOPATH/bin"
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
