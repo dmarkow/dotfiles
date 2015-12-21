@@ -2,6 +2,10 @@ NeoBundleLock Colour-Sampler-Pack 05cded87b2ef29aaa9e930230bb88e23abff4441
 NeoBundleLock FastFold ca0f3378a045dfda17e5a6759637bf43dad61f4f
 NeoBundleLock ack.vim 0a7d28bfb130696f73d122cac99d8903e066c896
 NeoBundleLock base16-vim e711e9b1412b55fec7e8a5cff4ac5c06f9078729
+<<<<<<< ec4489134b21757b05205b7c807f4be1d2e50587
+=======
+NeoBundleLock cobalt2-vim-theme 45973c6083d4f53b71f976b9718a5b663927be1a
+>>>>>>> Vim updates
 NeoBundleLock ctrlp.vim 564176f01d7f3f7f8ab452ff4e1f5314de7b0981
 NeoBundleLock neobundle.vim e89b79b748a2f54893bb8fba70ca808d8ee554c7
 NeoBundleLock nerdtree 4ebbb533c3faf2c480211db2b547972bb3b60f2b
@@ -19,6 +23,10 @@ NeoBundleLock vim-javascript 1d8c2677d26d6b3950b90dc1636e63334c8efc3b
 NeoBundleLock vim-jsx db329e121e281b79f19fc81ca641cf3a6209d8d2
 NeoBundleLock vim-markdown 15d19778a3be4ab3f949cba636d53a87e2c03f29
 NeoBundleLock vim-mustache-handlebars d1c983f3dd9a159c128c5192062caf7d47fd0f14
+<<<<<<< ec4489134b21757b05205b7c807f4be1d2e50587
 NeoBundleLock vim-rails 21ada3b19b77fc121afeb233c2b740600e41249a
+=======
+NeoBundleLock vim-rails ce4135c46059018ff1b4823f97b80f20ca7fb23f
+>>>>>>> Vim updates
 NeoBundleLock vim-ruby d87025e237360de04b76495b654882d37577766d
 NeoBundleLock vim-surround 2d05440ad23f97a7874ebd9b5de3a0e65d25d85c
