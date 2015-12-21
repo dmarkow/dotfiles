@@ -15,6 +15,7 @@ vim-elixir
 vim-endwise
 vim-fugitive
 vim-gitgutter
+vim-indent-guides
 vim-indent-object
 vim-javascript
 vim-jsx
