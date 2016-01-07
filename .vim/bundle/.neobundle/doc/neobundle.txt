@@ -189,6 +189,11 @@ neobundle#append()				*neobundle#append()*
 neobundle#end()					*neobundle#end()*
 		End neobundle bundles configuration block.
 
+neobundle#add({repository}, {options})		*neobundle#add()*
+		The function version of |:NeoBundle|.
+		Note: You must call it in |neobundle#begin()| or
+		|neobundle#append()| block.
+
 neobundle#source({bundle-names})		*neobundle#source()*
 		Same as |:NeoBundleSource|.
 		{bundle-names} is a list of bundle names.
@@ -244,11 +249,11 @@ neobundle#load_toml({filename}, [{options}])
 		# TOML sample
 		[[plugins]]
 		# repository name is required.
-		repository = 'kana/vim-niceblock'
+		repo = 'kana/vim-niceblock'
 		mappings = '<Plug>'
 
 		[[plugins]]
-		repository = 'Shougo/neosnippet.vim'
+		repo = 'Shougo/neosnippet.vim'
 		depends = ['Shougo/neosnippet-snippets',
 		  'Shougo/context_filetype.vim']
 		insert = 1
@@ -261,11 +266,11 @@ neobundle#load_toml({filename}, [{options}])
 		  name = 'honza-snippet'
 
 		[[plugins]]
-		repository = 'Shougo/neobundle.vim'
+		repo = 'Shougo/neobundle.vim'
 		fetch = 1
 
 		[[plugins]]
-		repository = 'Shougo/vimproc.vim'
+		repo = 'Shougo/vimproc.vim'
 
 		  [plugins.build]
 		  windows = 'tools\\update-dll-mingw'
@@ -373,13 +378,6 @@ neobundle#untap()				 *neobundle#untap()*
 
 neobundle#has_cache()			 *neobundle#has_cache()*
 		Checks if a cache file is available.
-		Note: It is deprecated.  You should use
-		|neobundle#load_cache()| instead of it.
-
-neobundle#has_fresh_cache()	 *neobundle#has_fresh_cache()*
-		Similar to |neobundle#has_cache|, but compares the
-		modification time of the cache file to your configuration file
-		({vimrc} or |$MYVIMRC|).
 		Note: It is deprecated.  You should use
 		|neobundle#load_cache()| instead of it.
 
