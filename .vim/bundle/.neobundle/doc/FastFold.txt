@@ -14,6 +14,7 @@ for a discussion.
 
 With this plug-in, the folds in the currently edited buffer are updated when
 certain triggers are met:
+
 - when saving the buffer
 - when closing or opening folds (zo, za, zc, etc...)
 - when moving or operating fold-wise (zj,zk,[z,]z)
@@ -50,8 +51,6 @@ matching global flags in your `.vimrc`. Default values are shown.
 <
 For example, by adding the following  to your `.vimrc`
 >
-  set foldmethod=syntax
-
   let g:tex_fold_enabled=1
   let g:vimsyn_folding='af'
   let g:xml_syntax_folding = 1
@@ -99,7 +98,20 @@ little benefit in forcing manual folds by FastFold, thence the default value '0'
 ===========================================================================
 3. Extra Notes ~
 
-3.1 Warnings ~
+3.1 Related Plugins ~
+
+`FastFold` integrates with `vim-stay` that stores and restores the last folds
+by `:mkview` and `:loadview`.
+
+------------------------------
+
+A `CustomFoldText()` function that displays the percentage of the number of
+buffer lines that the folded text takes up and indents folds according to
+their nesting level is available at
+
+http://www.github.com/Konfekt/FoldText
+
+3.2 Warnings ~
 
 Note: This plug-in will overwrite your manual folds when saving the
 currently edited buffer, unless you either
@@ -109,32 +121,15 @@ currently edited buffer, unless you either
   or
 -  the local `foldmethod` has been `manual` since entering the buffer.
 
-3.2 API ~
+3.3 API ~
 
 The last used fold method by which FastFold updates the folds in the current
 buffer can be read off from the window local variable `w:lastdfm`.
 
-3.2 Related Plugins ~
-
-`FastFold` integrates with both `vim-stay` and `restore_view.vim` that both
-store and restore the last folds by `:mkview` and `:loadview`. How they
-compare is discussed at
-
-https://github.com/kopischke/vim-stay/issues/2
-
-Note that `restore_view.vim` integrates only from version 1.2 and above and
-must load AFTER `FastFold`. (To ensure the correct autocmd execution order.)
-------------------------------
-
-A `CustomFoldText()` function that displays the percentage of the number of
-buffer lines that the folded text takes up and indents folds according to
-their nesting level is available at
-
-http://www.github.com/Konfekt/FoldText
-
-3.3 Thanks go to... ~
+3.4 Thanks go to... ~
 
 - starcraftman for providing this documentation, and
-- blueyed, willywampa and kopischke for code improvements.
+- blueyed, kopischke, sabauma, willywampa, and many others for reporting
+issues and suggesting code improvements.
 
 vim:tw=78:ts=2:sts=2:sw=2:ft=help:norl

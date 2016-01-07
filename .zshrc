@@ -66,13 +66,14 @@ alias rs='bin/rails s'
 alias rc='bin/rails c'
 alias rdb='bin/rails db'
 alias rdbu='rake db:update'
+alias gg='git grep'
 unalias grb
 export LS_COLORS="ow=01;91:"
 # Services
 alias devlog="tail -f log/development.log | grep -vE \"(^\s*$|asset)\""
 alias cpd="cap production deploy"
 alias rdbm='rake db:migrate db:test:prepare'
-alias ms='iex -S mix phoenix.server'
+alias ms='rlwrap -A -a foo iex -S mix phoenix.server'
 export GOPATH=$HOME/dev/go
 export SOURCE_ANNOTATION_DIRECTORIES='spec'
 export RUBYMOTION_ANDROID_SDK=~/dev/android-rubymotion/sdk
