@@ -283,6 +283,13 @@ map <leader>gs :CtrlP spec<cr>
 map <leader>ge :CtrlP ember<cr>
 map <leader>gg :topleft 100 :split Gemfile<cr>
 
+map <leader>em :CtrlP web/models<cr>
+map <leader>ec :CtrlP web/controllers<cr>
+map <leader>ev :CtrlP web/views<cr>
+map <leader>el :CtrlP lib<cr>
+map <leader>et :CtrlP web/templates<cr>
+map <leader>es :CtrlP web/static<cr>
+
 map <leader>t :CtrlP<cr>
 map <leader>b :CtrlPBuffer<cr>
 map <leader>a :A<cr>
@@ -328,11 +335,14 @@ nnoremap <Space> za
 let g:gitgutter_sign_column_always = 1
 let g:gitgutter_realtime = 1
 set dir=~/.vimswap//,/tmp//,.
-let g:ctrlp_custom_ignore = {
-  \ 'dir': 'node_modules\|bower_components'
-  \ }
+" let g:ctrlp_custom_ignore = {
+"   \ 'dir': 'node_modules\|bower_components\|deps\|_build'
+"   \ }
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+let g:ctrlp_user_caching = 0
 let g:ctrlp_working_path_mode = ''
 
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_liststyle=3
+map <leader>gb :Gblame<cr>
