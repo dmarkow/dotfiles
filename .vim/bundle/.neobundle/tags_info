@@ -1,4 +1,3 @@
-Colour-Sampler-Pack
 FastFold
 ack.vim
 base16-vim
@@ -9,7 +8,7 @@ nerdtree
 scss-syntax.vim
 supertab
 vim-coffee-script
-vim-colorschemes
+vim-colors-solarized
 vim-commentary
 vim-elixir
 vim-endwise

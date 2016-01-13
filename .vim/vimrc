@@ -32,7 +32,6 @@ NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'vim-scripts/Colour-Sampler-Pack'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'chriskempson/base16-vim'
@@ -42,12 +41,13 @@ NeoBundle 'Konfekt/FastFold'
 NeoBundle 'mxw/vim-jsx'
 NeoBundle 'elixir-lang/vim-elixir'
 NeoBundle 'gertjanreynaert/cobalt2-vim-theme'
+NeoBundle 'altercation/vim-colors-solarized'
 
 " NeoBundle 'Shougo/neosnippet.vim'
 " NeoBundle 'Shougo/neosnippet-snippets'
 " NeoBundle 'tpope/vim-fugitive'
 " NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'flazz/vim-colorschemes'
+" NeoBundle 'flazz/vim-colorschemes'
 
 " You can specify revision/branch/tag.
 " NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
