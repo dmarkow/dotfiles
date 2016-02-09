@@ -513,7 +513,6 @@ neobundle-options-on_i	neobundle.txt	/*neobundle-options-on_i*
 neobundle-options-on_map	neobundle.txt	/*neobundle-options-on_map*
 neobundle-options-on_path	neobundle.txt	/*neobundle-options-on_path*
 neobundle-options-on_source	neobundle.txt	/*neobundle-options-on_source*
-neobundle-options-on_unite	neobundle.txt	/*neobundle-options-on_unite*
 neobundle-options-pre_cmd	neobundle.txt	/*neobundle-options-pre_cmd*
 neobundle-options-regular_name	neobundle.txt	/*neobundle-options-regular_name*
 neobundle-options-rtp	neobundle.txt	/*neobundle-options-rtp*
@@ -524,7 +523,6 @@ neobundle-options-type	neobundle.txt	/*neobundle-options-type*
 neobundle-options-type__depth	neobundle.txt	/*neobundle-options-type__depth*
 neobundle-options-type__filename	neobundle.txt	/*neobundle-options-type__filename*
 neobundle-options-type__protocol	neobundle.txt	/*neobundle-options-type__protocol*
-neobundle-options-unite_sources	neobundle.txt	/*neobundle-options-unite_sources*
 neobundle-options-verbose	neobundle.txt	/*neobundle-options-verbose*
 neobundle-options-vim_version	neobundle.txt	/*neobundle-options-vim_version*
 neobundle-unite-source-neobundle	neobundle.txt	/*neobundle-unite-source-neobundle*
