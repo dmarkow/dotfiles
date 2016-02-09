@@ -1,69 +1,32 @@
-"NeoBundle Scripts-----------------------------
-if has('vim_starting')
-  if &compatible
-    set nocompatible               " Be iMproved
-  endif
+call plug#begin('~/.vim/plugged')
 
-  " Required:
-  set runtimepath+=/Users/dylan/.vim/bundle/neobundle.vim/
-endif
+Plug 'chriskempson/base16-vim'
+Plug 'mileszs/ack.vim'
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'tpope/vim-surround'
+Plug 'ervandew/supertab'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-markdown'
+Plug 'kchmck/vim-coffee-script'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-rails'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'kien/ctrlp.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'chriskempson/base16-vim'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'Konfekt/FastFold'
+Plug 'mxw/vim-jsx'
+Plug 'elixir-lang/vim-elixir'
+Plug 'gertjanreynaert/cobalt2-vim-theme'
+Plug 'altercation/vim-colors-solarized'
 
-" Required:
-call neobundle#begin(expand('/Users/dylan/.vim/bundle'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-"
-" Add or remove your Bundles here:
-NeoBundle 'chriskempson/base16-vim'
-NeoBundle 'mileszs/ack.vim'
-NeoBundle 'michaeljsmith/vim-indent-object'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'ervandew/supertab'
-NeoBundle 'tpope/vim-endwise'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'tpope/vim-markdown'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'tpope/vim-commentary'
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'cakebaker/scss-syntax.vim'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'chriskempson/base16-vim'
-NeoBundle 'mustache/vim-mustache-handlebars'
-NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'Konfekt/FastFold'
-NeoBundle 'mxw/vim-jsx'
-NeoBundle 'elixir-lang/vim-elixir'
-NeoBundle 'gertjanreynaert/cobalt2-vim-theme'
-NeoBundle 'altercation/vim-colors-solarized'
-
-" NeoBundle 'Shougo/neosnippet.vim'
-" NeoBundle 'Shougo/neosnippet-snippets'
-" NeoBundle 'tpope/vim-fugitive'
-" NeoBundle 'ctrlpvim/ctrlp.vim'
-" NeoBundle 'flazz/vim-colorschemes'
-
-" You can specify revision/branch/tag.
-" NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
-
-" Required:
-call neobundle#end()
-
-" Required:
-filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
-"End NeoBundle Scripts-------------------------set nocompatible
-
-" call pathogen#infect()
+call plug#end()
 
 let mapleader=","
 let g:mapleader=","
