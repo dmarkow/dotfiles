@@ -73,7 +73,7 @@ export LS_COLORS="ow=01;91:"
 alias devlog="tail -f log/development.log | grep -vE \"(^\s*$|asset)\""
 alias cpd="cap production deploy"
 alias rdbm='rake db:migrate db:test:prepare'
-alias ms='rlwrap -A -a foo iex -S mix phoenix.server'
+alias ms='iex -S mix phoenix.server'
 export GOPATH=$HOME/dev/go
 export SOURCE_ANNOTATION_DIRECTORIES='spec'
 export RUBYMOTION_ANDROID_SDK=~/dev/android-rubymotion/sdk
