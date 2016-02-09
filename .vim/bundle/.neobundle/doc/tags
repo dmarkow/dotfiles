@@ -169,7 +169,6 @@
 :NeoBundleLoadCache	neobundle.txt	/*:NeoBundleLoadCache*
 :NeoBundleLocal	neobundle.txt	/*:NeoBundleLocal*
 :NeoBundleLog	neobundle.txt	/*:NeoBundleLog*
-:NeoBundleRecipe	neobundle.txt	/*:NeoBundleRecipe*
 :NeoBundleReinstall	neobundle.txt	/*:NeoBundleReinstall*
 :NeoBundleRemotePlugins	neobundle.txt	/*:NeoBundleRemotePlugins*
 :NeoBundleRollback	neobundle.txt	/*:NeoBundleRollback*
@@ -446,6 +445,7 @@ indent_guides.txt	indent_guides.txt	/*indent_guides.txt*
 macros/rails.vim	rails.txt	/*macros\/rails.vim*
 neobundle	neobundle.txt	/*neobundle*
 neobundle#add()	neobundle.txt	/*neobundle#add()*
+neobundle#add_meta()	neobundle.txt	/*neobundle#add_meta()*
 neobundle#append()	neobundle.txt	/*neobundle#append()*
 neobundle#begin()	neobundle.txt	/*neobundle#begin()*
 neobundle#bundle()	neobundle.txt	/*neobundle#bundle()*
@@ -515,7 +515,6 @@ neobundle-options-on_path	neobundle.txt	/*neobundle-options-on_path*
 neobundle-options-on_source	neobundle.txt	/*neobundle-options-on_source*
 neobundle-options-on_unite	neobundle.txt	/*neobundle-options-on_unite*
 neobundle-options-pre_cmd	neobundle.txt	/*neobundle-options-pre_cmd*
-neobundle-options-recipe	neobundle.txt	/*neobundle-options-recipe*
 neobundle-options-regular_name	neobundle.txt	/*neobundle-options-regular_name*
 neobundle-options-rtp	neobundle.txt	/*neobundle-options-rtp*
 neobundle-options-script_type	neobundle.txt	/*neobundle-options-script_type*
@@ -528,7 +527,6 @@ neobundle-options-type__protocol	neobundle.txt	/*neobundle-options-type__protoco
 neobundle-options-unite_sources	neobundle.txt	/*neobundle-options-unite_sources*
 neobundle-options-verbose	neobundle.txt	/*neobundle-options-verbose*
 neobundle-options-vim_version	neobundle.txt	/*neobundle-options-vim_version*
-neobundle-recipe	neobundle.txt	/*neobundle-recipe*
 neobundle-unite-source-neobundle	neobundle.txt	/*neobundle-unite-source-neobundle*
 neobundle-unite-source-neobundle-install	neobundle.txt	/*neobundle-unite-source-neobundle-install*
 neobundle-unite-source-neobundle-lazy	neobundle.txt	/*neobundle-unite-source-neobundle-lazy*
