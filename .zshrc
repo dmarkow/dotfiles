@@ -83,3 +83,11 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="./bin:/usr/local/bin:$PATH:$GOPATH/bin"
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+
+alias wake_sc="wakeonlan -i 10.1.3.255 fc:aa:14:80:b3:e0"
+alias wake_ks="wakeonlan -i 10.1.3.255 30:5A:3A:49:66:E4"
+alias wake_cd="wakeonlan -i 10.1.3.255 54:04:a6:0c:f6:3f"
+alias wake_ch="wakeonlan -i 10.1.3.255 FC:AA:14:F2:16:1D"
+alias wake_mv="wakeonlan -i 10.1.3.255 FC:AA:14:80:B3:E5"
+alias wake_conf="wakeonlan -i 10.1.3.255 34:13:E8:23:43:44"
+alias wake_ww="wakeonlan -i 10.1.3.255 FC:AA:14:F2:16:28"
