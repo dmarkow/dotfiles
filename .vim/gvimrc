@@ -1,5 +1,6 @@
 if has("gui_macvim")
-  set guifont=Source\ Code\ Pro:h14
+  " set guifont=Source\ Code\ Pro:h14
+  set guifont=Operator\ Mono\ Book:h14
   " set guifont=Roboto\ Mono:h13
   " set guifont=Inconsolata-G:h13
   set linespace=2
@@ -22,8 +23,9 @@ if has("gui_macvim")
   set guioptions-=T
   set showtabline=0
   " colors base16-harmonic16
-  colors base16-eighties
+  " colors base16-eighties
   " colors grb256
+  colors base16-eighties
   set bg=dark
   " colors github
 endif

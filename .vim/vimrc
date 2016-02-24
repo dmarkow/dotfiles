@@ -1,6 +1,5 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'chriskempson/base16-vim'
 Plug 'mileszs/ack.vim'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'tpope/vim-surround'
@@ -289,6 +288,10 @@ nnoremap <Space> za
 " autocmd Syntax ruby setlocal foldmethod=syntax
 " autocmd Syntax ruby normal zR
 
+xmap \\  <Plug>Commentary
+nmap \\  <Plug>Commentary
+nmap \\\ <Plug>CommentaryLine
+nmap \\u <Plug>CommentaryUndo
 
 " Fuzzy select one of those. Open the selected file with :e.
 let g:gitgutter_sign_column_always = 1
