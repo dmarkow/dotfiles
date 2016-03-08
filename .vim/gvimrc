@@ -1,9 +1,9 @@
 if has("gui_macvim")
   " set guifont=Source\ Code\ Pro:h14
-  set guifont=Operator\ Mono\ Book:h14
+  set guifont=Operator\ Mono\ Book:h15
   " set guifont=Roboto\ Mono:h13
   " set guifont=Inconsolata-G:h13
-  set linespace=2
+  set linespace=3
   " set guifont=Inconsolata-G:h14
   " set guifont=M+_1m_Light:h14
   macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
@@ -25,8 +25,9 @@ if has("gui_macvim")
   " colors base16-harmonic16
   " colors base16-eighties
   " colors grb256
-  colors base16-eighties
-  set bg=dark
+  " colors base16-eighties
   " colors github
+  colors solarized
+  set bg=light
 endif
 
