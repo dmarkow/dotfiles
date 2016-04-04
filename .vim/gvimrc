@@ -27,7 +27,9 @@ if has("gui_macvim")
   " colors grb256
   " colors base16-eighties
   " colors github
-  colors solarized
-  set bg=light
+  " colors solarized
+  let g:hybrid_reduced_contrast=1
+  colors hybrid
+  set bg=dark
 endif
 

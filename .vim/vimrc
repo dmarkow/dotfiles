@@ -22,6 +22,9 @@ Plug 'mxw/vim-jsx'
 Plug 'elixir-lang/vim-elixir'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'w0ng/vim-hybrid'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
@@ -303,10 +306,12 @@ set dir=~/.vimswap//,/tmp//,.
 "   \ 'dir': 'node_modules\|bower_components\|deps\|_build'
 "   \ }
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-let g:ctrlp_user_caching = 0
+set grepprg=ag\ --nogroup\ --nocolor
+" let g:ctrlp_use_caching = 0
 let g:ctrlp_working_path_mode = ''
 
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_liststyle=3
 map <leader>gb :Gblame<cr>
+let g:airline_theme='hybridline'
