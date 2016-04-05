@@ -81,8 +81,12 @@ export RUBYMOTION_ANDROID_NDK=~/dev/android-rubymotion/ndk
 export HOMEBREW_GITHUB_API_TOKEN=677723813443fbf8fd315a078c2e42142d792b06
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="./bin:/usr/local/bin:$PATH:$GOPATH/bin"
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+if which brew > /dev/null; then
+  export NVM_DIR=~/.nvm
+  source $(brew --prefix nvm)/nvm.sh
+else
+  source /etc/profile.d/nvm.sh
+fi
 
 alias wake_sc="wakeonlan -i 10.1.3.255 fc:aa:14:80:b3:e0"
 alias wake_ks="wakeonlan -i 10.1.3.255 30:5A:3A:49:66:E4"
