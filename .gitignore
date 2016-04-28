@@ -1,3 +1,4 @@
 *.swo
 .netrwhist
 *.swp
+.vim/plugged
