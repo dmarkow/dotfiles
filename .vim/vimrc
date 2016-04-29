@@ -25,6 +25,7 @@ Plug 'honza/vim-snippets'
 Plug 'w0ng/vim-hybrid'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'quanganhdo/grb256'
 
 call plug#end()
 
