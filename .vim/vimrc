@@ -26,6 +26,9 @@ Plug 'w0ng/vim-hybrid'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'quanganhdo/grb256'
+Plug 'herrbischoff/cobalt2.vim'
+Plug 'zenorocha/dracula-theme', {'rtp': 'vim'}
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -316,3 +319,6 @@ let g:netrw_altv = 1
 let g:netrw_liststyle=3
 map <leader>gb :Gblame<cr>
 let g:airline_theme='hybridline'
+
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"

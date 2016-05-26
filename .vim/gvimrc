@@ -1,7 +1,7 @@
 if has("gui_macvim")
   " set guifont=Source\ Code\ Pro:h14
-  set guifont=Operator\ Mono\ Book:h15
-  " set guifont=Roboto\ Mono:h13
+  " set guifont=Operator\ Mono\ Book:h15
+  set guifont=Roboto\ Mono:h12
   " set guifont=Inconsolata-G:h13
   set linespace=3
   " set guifont=Inconsolata-G:h14
@@ -29,7 +29,7 @@ if has("gui_macvim")
   " colors github
   " colors solarized
   let g:hybrid_reduced_contrast=1
-  colors hybrid
+  colors cobalt2
   set bg=dark
 endif
 
