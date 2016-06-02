@@ -101,8 +101,8 @@ set hlsearch
 " COLOR
 """""""""""""""""""""""""""
 " :set t_Co=256
-:color base16-ocean
-set bg=dark
+" :color base16-ocean
+" set bg=dark
 " let g:powerline_config_overrides = {"colorscheme": "base16"}
 " let g:Powerline_colorscheme = 'base16'
 """""""""""""""""""""""""""
