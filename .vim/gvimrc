@@ -1,18 +1,13 @@
 if has("gui_macvim")
-  " set guifont=Source\ Code\ Pro:h14
-  " set guifont=Operator\ Mono\ Book:h15
   set guifont=Roboto\ Mono:h14
-  set linespace=0
-  " set guifont=Inconsolata-G:h13
-  " set linespace=3
-  " set guifont=Inconsolata-G:h14
-  " set guifont=M+_1m_Light:h14
   macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
   macmenu File.New\ Tab key=<D-T>
   map <D-t> :CtrlP<cr>
   imap <D-t> <Esc>:CtrlP<cr>
   map <D-F> :Ack!<space>
   imap <D-F> <Esc>:Ack!<space>
+  map <D-a> <C-a>
+  imap <D-a> <C-a>
 
   " Command-][ to increase/decrease indentation
   vmap <D-]> >gv
@@ -22,15 +17,14 @@ if has("gui_macvim")
   set guioptions-=L
   set guioptions-=r
   set guioptions-=T
-  set showtabline=0
-  " colors base16-harmonic16
-  " colors base16-eighties
-  " colors grb256
-  " colors base16-eighties
-  " colors github
-  " colors solarized
+  set showtabline=1
   let g:hybrid_reduced_contrast=1
-  colors cobalt2
+  colors hybrid
   set bg=dark
+endif
+
+" Retina Macbook screen doesn't display Roboto Mono as nicely as the 4k monitor
+if hostname() == 'macbook-pro.local'
+  set linespace=3
 endif
 
