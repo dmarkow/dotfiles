@@ -2,6 +2,7 @@ if has("gui_macvim")
   set guifont=Roboto\ Mono:h14
   macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
   macmenu File.New\ Tab key=<D-T>
+  macmenu Edit.Select\ All key=<nop>
   map <D-t> :CtrlP<cr>
   imap <D-t> <Esc>:CtrlP<cr>
   map <D-F> :Ack!<space>
