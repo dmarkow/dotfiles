@@ -99,3 +99,5 @@ alias wake_gw="wakeonlan -i 10.1.3.255 90:2B:34:9E:7A:17"
 alias wake_ew="wakeonlan -i 10.1.3.255 FC:AA:14:F2:16:0A"
 alias wake_overflow2="wakeonlan -i 10.1.3.255 1C:6F:65:31:A0:9A"
 alias wake_pk="wakeonlan -i 10.1.3.255 30:5A:3A:49:66:7A"
+
+alias tunnel_ch="ssh -nNT -L 5900:10.1.1.157:5900 sc.petefowler.com"
