@@ -27,7 +27,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'quanganhdo/grb256'
 Plug 'herrbischoff/cobalt2.vim'
-Plug 'zenorocha/dracula-theme', {'rtp': 'vim'}
+Plug 'dracula/vim', {'dir': 'plugged/dracula'}
 Plug 'morhetz/gruvbox'
 
 call plug#end()
