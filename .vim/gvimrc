@@ -20,7 +20,7 @@ if has("gui_macvim")
   set guioptions-=T
   set showtabline=1
   let g:hybrid_reduced_contrast=1
-  colors hybrid
+  colors base16-materia
   set bg=dark
 endif
 
