@@ -88,6 +88,7 @@ if which brew > /dev/null; then
   source $(brew --prefix nvm)/nvm.sh
 else
   [ -f /etc/profile.d/nvm.sh ] && source /etc/profile.d/nvm.sh
+  [ -s $HOME/.nvm ] && . $HOME/.nvm/nvm.sh
 fi
 
 alias wake_sc="wakeonlan -i 10.1.3.255 fc:aa:14:80:b3:e0"
