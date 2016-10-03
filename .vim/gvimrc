@@ -1,5 +1,7 @@
 if has("gui_macvim")
   set guifont=Roboto\ Mono:h14
+  set guifont=Source\ Code\ Pro:h14
+  set linespace=1
   macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
   macmenu File.New\ Tab key=<D-T>
   macmenu Edit.Select\ All key=<nop>
@@ -20,7 +22,7 @@ if has("gui_macvim")
   set guioptions-=T
   set showtabline=1
   let g:hybrid_reduced_contrast=1
-  colors base16-materia
+  colors cobalt2
   set bg=dark
 endif
 
