@@ -297,8 +297,10 @@ onoremap <F9> <C-C>za
 vnoremap <F9> zf
 map <leader>fs :setlocal foldmethod=syntax<cr>
 nnoremap <Space> za
-" autocmd Syntax ruby setlocal foldmethod=syntax
-" autocmd Syntax ruby normal zR
+autocmd Syntax ruby setlocal foldmethod=syntax
+autocmd Syntax ruby normal zR
+autocmd Syntax javascript,javascript.jsx setlocal foldmethod=syntax
+autocmd Syntax javascript,javascript.jsx normal zR
 
 xmap \\  <Plug>Commentary
 nmap \\  <Plug>Commentary
