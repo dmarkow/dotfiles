@@ -9,15 +9,17 @@
 snippet rcc "create class component" b
 import React from "react";
 
-const ${1:ClassComponent} = React.createClass({
+class ${1:ClassComponent} extends React.Component {
   render() {
-    return (
-      ${2:<div>
-        $3
-      </div>}
-    );
-  }
-});
+	  return (
+		  <div>
+			</div>
+		);
+	}
+}
+
+$1.propTypes = {
+};
 
 export default $1;
 endsnippet
@@ -209,8 +211,8 @@ constructor(props) {
   super(props);
 
   ${1:this.state = {
-	  $2
-	};}
+    $2
+  };}
 }
 
 $0
