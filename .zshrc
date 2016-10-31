@@ -85,7 +85,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="./bin:/usr/local/bin:$PATH:$GOPATH/bin"
 if which brew > /dev/null; then
   export NVM_DIR=~/.nvm
-  source $(brew --prefix nvm)/nvm.sh
+  source /usr/local/opt/nvm/nvm.sh
 else
   [ -f /etc/profile.d/nvm.sh ] && source /etc/profile.d/nvm.sh
   [ -s $HOME/.nvm ] && . $HOME/.nvm/nvm.sh
