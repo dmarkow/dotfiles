@@ -22,8 +22,8 @@ if has("gui_macvim")
   set guioptions-=T
   set showtabline=1
   let g:hybrid_reduced_contrast=1
-  colors cobalt2
-  set bg=dark
+  colors base16-github
+  hi Search         guifg=NONE        guibg=NONE        gui=underline ctermfg=NONE        ctermbg=NONE        cterm=underline
 endif
 
 " Retina Macbook screen doesn't display Roboto Mono as nicely as the 4k monitor
