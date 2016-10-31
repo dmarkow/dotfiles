@@ -2,3 +2,4 @@
 .netrwhist
 *.swp
 .vim/plugged
+.bundle/cache
