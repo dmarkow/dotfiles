@@ -2,3 +2,5 @@
 BUNDLE_JOBS: '4'
 BUNDLE_BUILD__PUMA: "--with-opt-dir=/usr/local/opt/openssl"
 BUNDLE_BUILD__EVENTMACHINE: "--with-cppflags=-I/usr/local/opt/openssl/include"
+BUNDLE_BUILD__RASPELL: "--with-opt-dir=/usr/local/opt/aspell"
+BUNDLE_BUILD__NOKOGIRI: "--use-system-libraries --with-xml2-include=/usr/local/opt/libxml2/include/libxml2"
