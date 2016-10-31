@@ -250,7 +250,7 @@ map <leader>gh :CtrlP app/helpers<cr>
 map <leader>gl :CtrlP lib<cr>
 map <leader>gs :CtrlP spec<cr>
 map <leader>ge :CtrlP ember<cr>
-map <leader>gg :topleft 100 :split Gemfile<cr>
+map <leader>gg :hi Search         guifg=NONE        guibg=NONE        gui=underline ctermfg=NONE        ctermbg=NONE        cterm=underline<cr>
 
 map <leader>em :CtrlP web/models<cr>
 map <leader>ec :CtrlP web/controllers<cr>
