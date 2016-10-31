@@ -51,7 +51,6 @@ function marks {
 # Aliases
 alias fs="foreman start"
 alias ws="node_modules/.bin/webpack-dashboard -m -- node_modules/.bin/webpack-dev-server --config ./webpack.development.config.js"
-alias wsfull="node_modules/.bin/webpack-dashboard -- node_modules/.bin/webpack-dev-server --config ./webpack.development.config.js"
 
 alias be='bundle exec'
 alias sshpdx='sshec2'
