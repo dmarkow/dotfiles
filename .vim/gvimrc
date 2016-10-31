@@ -27,7 +27,9 @@ if has("gui_macvim")
 endif
 
 " Retina Macbook screen doesn't display Roboto Mono as nicely as the 4k monitor
-if hostname() == 'macbook-pro.local'
-  set linespace=3
+if hostname() =~ "macbook-pro"
+  set guifont=Source\ Code\ Pro:h14
+  set linespace=1
+  colors grb256
 endif
 
