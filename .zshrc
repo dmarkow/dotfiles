@@ -50,7 +50,7 @@ function marks {
 
 # Aliases
 alias fs="foreman start"
-alias ws="node_modules/.bin/webpack-dashboard -m -- node_modules/.bin/webpack-dev-server --config ./webpack.development.config.js"
+alias ws="node_modules/.bin/webpack-dashboard -m -- node ./dev-server.js"
 
 alias be='bundle exec'
 alias sshpdx='sshec2'
@@ -105,3 +105,5 @@ alias wake_pk="wakeonlan -i 10.1.3.255 30:5A:3A:49:66:7A"
 
 alias tunnel_ch="ssh -nNT -L 5900:10.1.1.157:5900 sc.petefowler.com"
 alias tunnel_pk="ssh -nNT -L 5900:10.1.1.181:5900 sc.petefowler.com"
+
+export PATH="$HOME/.yarn/bin:$PATH"
