@@ -31,6 +31,7 @@ Plug 'morhetz/gruvbox'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-colorscheme-switcher'
 Plug 'ajh17/Spacegray.vim'
+Plug 'vim-scripts/northland.vim'
 
 call plug#end()
 
