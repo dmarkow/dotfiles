@@ -134,6 +134,7 @@ augroup myfiletypes
     autocmd BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,*.jbuilder}    set ft=ruby
     autocmd FileType ruby,coffee,haml,eruby,yaml,html,javascript,sass,cucumber set ai sw=2 sts=2 et
     autocmd FileType python set sw=4 sts=4 et
+    autocmd BufRead,BufNewFile {*.ios.js} set ft=javascript.jsx
 augroup END
 set switchbuf=useopen
 let macvim_hig_shift_movement = 1
