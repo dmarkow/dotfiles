@@ -266,6 +266,8 @@ map <leader>b :CtrlPBuffer<cr>
 map <leader>a :A<cr>
 map <leader>r :R<cr>
 
+map <leader>w :set wrap!<cr>
+
 function! PromoteToLet()
   :normal! dd
   :normal! P

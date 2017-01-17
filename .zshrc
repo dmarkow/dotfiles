@@ -50,7 +50,7 @@ function marks {
 
 # Aliases
 alias fs="foreman start"
-alias ws="node_modules/.bin/webpack-dashboard -m -- node ./dev-server.js"
+alias ws="yarn dev"
 
 alias be='bundle exec'
 alias sshpdx='sshec2'

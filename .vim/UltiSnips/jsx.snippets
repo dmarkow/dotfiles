@@ -10,6 +10,9 @@ snippet rcc "create class component" b
 import React from "react";
 
 class ${1:ClassComponent} extends React.Component {
+  static propTypes = {
+	}
+
   render() {
 	  return (
 		  <div>
@@ -17,9 +20,6 @@ class ${1:ClassComponent} extends React.Component {
 		);
 	}
 }
-
-$1.propTypes = {
-};
 
 export default $1;
 endsnippet
