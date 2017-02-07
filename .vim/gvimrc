@@ -34,3 +34,23 @@ endif
 "   " colors grb256
 " endif
 
+
+" Shortcuts to switch fonts
+function! Font1()
+  set guifont=Roboto\ Mono:h12
+  set linespace=1
+endfunction
+
+function! Font2()
+  set guifont=Inconsolata-G:h14
+  set linespace=0
+endfunction
+
+function! Font3()
+  set guifont=Source\ Code\ Pro:h14
+  set linespace=2
+endfunction
+
+map <leader>f1 :call Font1()<cr>
+map <leader>f2 :call Font2()<cr>
+map <leader>f3 :call Font3()<cr>
