@@ -16,9 +16,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'kien/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'chriskempson/base16-vim'
-Plug 'nathanaelkane/vim-indent-guides'
 Plug 'Konfekt/FastFold'
-Plug 'mxw/vim-jsx'
 Plug 'elixir-lang/vim-elixir'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -32,6 +30,7 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-colorscheme-switcher'
 Plug 'ajh17/Spacegray.vim'
 Plug 'vim-scripts/northland.vim'
+Plug 'mxw/vim-jsx'
 
 call plug#end()
 
