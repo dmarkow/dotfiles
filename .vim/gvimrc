@@ -52,8 +52,8 @@ function! Font3()
 endfunction
 
 function! Font4()
-  set guifont=Roboto\ Mono:h13
-  set linespace=2
+  set guifont=Roboto\ Mono:h14
+  set linespace=1
 endfunction
 
 map <leader>f1 :call Font1()<cr>
