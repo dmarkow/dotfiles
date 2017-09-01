@@ -23,9 +23,6 @@ Plug 'honza/vim-snippets'
 Plug 'w0ng/vim-hybrid'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'quanganhdo/grb256'
-Plug 'herrbischoff/cobalt2.vim'
-Plug 'morhetz/gruvbox'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-colorscheme-switcher'
 Plug 'ajh17/Spacegray.vim'
@@ -304,8 +301,8 @@ map <leader>fs :setlocal foldmethod=syntax<cr>
 nnoremap <Space> za
 autocmd Syntax ruby setlocal foldmethod=syntax
 autocmd Syntax ruby normal zR
-autocmd Syntax javascript,javascript.jsx setlocal foldmethod=syntax
-autocmd Syntax javascript,javascript.jsx normal zR
+" autocmd Syntax javascript,javascript.jsx setlocal foldmethod=syntax
+" autocmd Syntax javascript,javascript.jsx normal zR
 
 xmap \\  <Plug>Commentary
 nmap \\  <Plug>Commentary

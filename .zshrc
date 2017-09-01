@@ -22,7 +22,7 @@ ZSH_THEME="dstufft"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx rails ruby github brew rbenv)
+plugins=(git osx rails ruby github brew rbenv yarn)
 
 source $ZSH/oh-my-zsh.sh
 # export PROMPT='%{$fg[green]%}%m %~%{$fg_bold[blue]%}$(git_prompt_info)%{$reset_color%} '
@@ -53,7 +53,7 @@ alias fs="foreman start"
 alias ws="yarn dev"
 
 alias be='bundle exec'
-alias sshpdx='sshec2'
+alias sshpdx='ssh pdx.petefowler.com'
 alias sshsc='ssh dylan@sc.petefowler.com'
 alias sshscl='ssh 10.1.0.10'
 alias sshec2='ssh ec2-2.petefowler.com'
@@ -100,3 +100,4 @@ alias tunnel_ch="ssh -nNT -L 5900:10.1.1.157:5900 sc.petefowler.com"
 alias tunnel_pk="ssh -nNT -L 5900:10.1.1.181:5900 sc.petefowler.com"
 
 export PATH="$HOME/.yarn/bin:$PATH"
+export ERL_AFLAGS="-kernel shell_history enabled"

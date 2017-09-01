@@ -24,7 +24,7 @@ if has("gui_macvim")
   set showtabline=1
   let g:hybrid_reduced_contrast=1
   " hi Search         guifg=NONE        guibg=NONE        gui=underline ctermfg=NONE        ctermbg=NONE        cterm=underline
-  colors base16-materia
+  colors base16-gruvbox-dark-hard
 endif
 
 " " Retina Macbook screen doesn't display Roboto Mono as nicely as the 4k monitor
@@ -56,7 +56,13 @@ function! Font4()
   set linespace=1
 endfunction
 
+function! Font5()
+  set guifont=SFMono-Light:h13
+  set linespace=3
+endfunction
+
 map <leader>f1 :call Font1()<cr>
 map <leader>f2 :call Font2()<cr>
 map <leader>f3 :call Font3()<cr>
 map <leader>f4 :call Font4()<cr>
+map <leader>f5 :call Font5()<cr>
