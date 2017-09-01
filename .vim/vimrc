@@ -310,7 +310,7 @@ nmap \\\ <Plug>CommentaryLine
 nmap \\u <Plug>CommentaryUndo
 
 " Fuzzy select one of those. Open the selected file with :e.
-let g:gitgutter_sign_column_always = 1
+set signcolumn=yes
 let g:gitgutter_realtime = 1
 set dir=~/.vimswap//,/tmp//,.
 " let g:ctrlp_custom_ignore = {
