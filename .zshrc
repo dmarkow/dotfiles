@@ -75,12 +75,15 @@ export LS_COLORS="ow=01;91:"
 alias devlog="tail -f log/development.log | grep -vE \"(^\s*$|asset)\""
 alias cpd="cap production deploy"
 alias rdbm='rake db:migrate db:test:prepare'
-alias ms='iex -S mix phoenix.server'
+alias ms='iex -S mix phx.server'
 export GOPATH=$HOME/dev/go
 export SOURCE_ANNOTATION_DIRECTORIES='spec'
 export RUBYMOTION_ANDROID_SDK=~/dev/android-rubymotion/sdk
 export RUBYMOTION_ANDROID_NDK=~/dev/android-rubymotion/ndk
 export HOMEBREW_GITHUB_API_TOKEN=0e7939518d6818f08628f6ccea7e0234215ecb75
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="./bin:/usr/local/bin:$PATH:$GOPATH/bin"
 
@@ -101,3 +104,7 @@ alias tunnel_pk="ssh -nNT -L 5900:10.1.1.181:5900 sc.petefowler.com"
 
 export PATH="$HOME/.yarn/bin:$PATH"
 export ERL_AFLAGS="-kernel shell_history enabled"
+
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[[ -f /Users/dylan/.config/yarn/global/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/dylan/.config/yarn/global/node_modules/tabtab/.completions/electron-forge.zsh
