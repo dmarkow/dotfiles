@@ -28,6 +28,7 @@ Plug 'xolox/vim-colorscheme-switcher'
 Plug 'ajh17/Spacegray.vim'
 Plug 'vim-scripts/northland.vim'
 Plug 'mxw/vim-jsx'
+Plug 'dracula/vim'
 
 call plug#end()
 
