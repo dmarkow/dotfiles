@@ -2,6 +2,8 @@ if has("gui_macvim")
   set guifont=Roboto\ Mono:h14
   set guifont=Source\ Code\ Pro:h14
   set guifont=Inconsolata-G:h14
+  set guifont=Dank\ Mono:h14
+  set linespace=2
   " set linespace=0
   macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
   macmenu File.New\ Tab key=<D-T>

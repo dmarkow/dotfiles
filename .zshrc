@@ -51,6 +51,8 @@ function marks {
 # Aliases
 alias fs="foreman start"
 alias ws="yarn dev"
+alias yo="yarn outdated"
+alias yui="yarn upgrade-interactive"
 
 alias be='bundle exec'
 alias sshpdx='ssh pdx.petefowler.com'
@@ -58,7 +60,7 @@ alias sshsc='ssh dylan@sc.petefowler.com'
 alias sshscl='ssh 10.1.0.10'
 alias sshec2='ssh ec2-2.petefowler.com'
 alias sshdfw='ssh 10.0.0.10'
-alias gi='gem install --no-ri --no-rdoc'
+alias gi='gem install --no-document'
 alias e='atom'
 alias speedtest='wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip'
 alias l='ll'
@@ -78,14 +80,14 @@ alias rdbm='rake db:migrate db:test:prepare'
 alias ms='iex -S mix phx.server'
 export GOPATH=$HOME/dev/go
 export SOURCE_ANNOTATION_DIRECTORIES='spec'
-export RUBYMOTION_ANDROID_SDK=~/dev/android-rubymotion/sdk
-export RUBYMOTION_ANDROID_NDK=~/dev/android-rubymotion/ndk
 export HOMEBREW_GITHUB_API_TOKEN=0e7939518d6818f08628f6ccea7e0234215ecb75
 export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-export PATH="./bin:/usr/local/bin:$PATH:$GOPATH/bin"
+export PATH="./bin:/usr/local/sbin:/usr/local/bin:$PATH:$GOPATH/bin"
 
 alias wake_sc="wakeonlan -i 10.1.3.255 fc:aa:14:80:b3:e0"
 alias wake_ks="wakeonlan -i 10.1.3.255 30:5A:3A:49:66:E4"
@@ -108,3 +110,4 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 # tabtab source for electron-forge package
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
 [[ -f /Users/dylan/.config/yarn/global/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/dylan/.config/yarn/global/node_modules/tabtab/.completions/electron-forge.zsh
+export PATH="/usr/local/opt/ruby/bin:$PATH"
