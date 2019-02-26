@@ -53,6 +53,7 @@ alias fs="foreman start"
 alias ws="yarn dev"
 alias yo="yarn outdated"
 alias yui="yarn upgrade-interactive"
+alias yuil="yarn upgrade-interactive --latest"
 
 alias be='bundle exec'
 alias sshpdx='ssh pdx.petefowler.com'
