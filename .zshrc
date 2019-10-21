@@ -112,3 +112,4 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
 [[ -f /Users/dylan/.config/yarn/global/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/dylan/.config/yarn/global/node_modules/tabtab/.completions/electron-forge.zsh
 export PATH="/usr/local/opt/ruby/bin:$PATH"
+
