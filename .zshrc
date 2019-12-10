@@ -22,7 +22,7 @@ ZSH_THEME="dstufft"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx rails ruby github brew rbenv yarn)
+plugins=(git osx ruby github brew rbenv yarn)
 
 source $ZSH/oh-my-zsh.sh
 # export PROMPT='%{$fg[green]%}%m %~%{$fg_bold[blue]%}$(git_prompt_info)%{$reset_color%} '
