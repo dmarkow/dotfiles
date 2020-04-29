@@ -113,3 +113,7 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 [[ -f /Users/dylan/.config/yarn/global/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/dylan/.config/yarn/global/node_modules/tabtab/.completions/electron-forge.zsh
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 
+
+
+export VOLTA_HOME="/Users/dylan/.volta"
+grep --silent "$VOLTA_HOME/bin" <<< $PATH || export PATH="$VOLTA_HOME/bin:$PATH"
