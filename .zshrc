@@ -115,5 +115,5 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 
 
-export VOLTA_HOME="/Users/dylan/.volta"
+export VOLTA_HOME="$HOME/.volta"
 grep --silent "$VOLTA_HOME/bin" <<< $PATH || export PATH="$VOLTA_HOME/bin:$PATH"
