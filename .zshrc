@@ -117,3 +117,4 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 export VOLTA_HOME="$HOME/.volta"
 grep --silent "$VOLTA_HOME/bin" <<< $PATH || export PATH="$VOLTA_HOME/bin:$PATH"
+[ -d /Users/dylan ] && . $(brew --prefix asdf)/asdf.sh
