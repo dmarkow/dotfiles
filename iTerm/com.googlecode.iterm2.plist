@@ -45234,7 +45234,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>970 768 620 392 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 2560 1417 0 0 2560 1417 </string>
+	<string>194 115 2042 1125 0 0 2560 1417 </string>
 	<key>NeverWarnAboutShortLivedSessions_946E4DE8-BE6A-4A87-B2DD-0B735D767B6B</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_97B1D66D-04A9-4443-BBB9-072B8280E157</key>
@@ -48958,7 +48958,9 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
+		<string>3.3.10beta3</string>
 		<string>3.3.8beta3</string>
+		<string>3.3.10beta4</string>
 		<string>3.3.7beta1</string>
 		<string>3.3.8beta5</string>
 		<string>3.3.7beta3</string>
@@ -48967,10 +48969,10 @@
 		<string>3.3.7beta2</string>
 		<string>3.3.9beta1</string>
 		<string>3.3.10beta1</string>
+		<string>3.3.11beta1</string>
 		<string>3.3.7beta4</string>
-		<string>3.3.10beta2</string>
 		<string>3.3.8beta1</string>
-		<string>3.3.10beta3</string>
+		<string>3.3.10beta2</string>
 	</array>
 	<key>NoSyncFrame_SessionsPreferences</key>
 	<dict>
@@ -48989,7 +48991,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>A791F18F-9EB9-48B8-B244-12803F7CAA88</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>50</integer>
+	<integer>65</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>593700880.80754101</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
@@ -49483,11 +49485,11 @@
 		<array>
 			<dict>
 				<key>isTerminal</key>
-				<true/>
+				<false/>
 				<key>name</key>
-				<string>currentSession.pid</string>
+				<string>currentSession</string>
 				<key>nonterminalContext</key>
-				<integer>0</integer>
+				<integer>1</integer>
 			</dict>
 			<dict>
 				<key>isTerminal</key>
@@ -49542,6 +49544,14 @@
 				<true/>
 				<key>name</key>
 				<string>iterm2.localhostName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession.jobPid</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -49637,6 +49647,14 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
+				<string>currentSession.pid</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
 				<string>titleOverrideFormat</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -49680,14 +49698,6 @@
 				<string>currentSession</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<false/>
-				<key>name</key>
-				<string>currentSession</string>
-				<key>nonterminalContext</key>
-				<integer>1</integer>
 			</dict>
 		</array>
 		<key>4</key>
@@ -49792,11 +49802,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-04-30T13:34:49Z</date>
+	<date>2020-06-10T12:47:25Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
-	<integer>396745228</integer>
+	<integer>3378027244</integer>
 	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -49806,7 +49816,7 @@
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>ShowMetalFPSmeter</key>
 	<false/>
 	<key>ShowNewOutputIndicator</key>
@@ -49874,7 +49884,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.10beta3</string>
+	<string>3.3.11beta1</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
