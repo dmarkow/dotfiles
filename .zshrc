@@ -57,6 +57,7 @@ alias yuil="yarn upgrade-interactive --latest"
 
 alias be='bundle exec'
 alias sshpdx='ssh pdx.petefowler.com'
+alias sshnv='ssh nv.petefowler.com'
 alias sshsc='ssh dylan@sc.petefowler.com'
 alias sshscl='ssh 10.1.0.10'
 alias sshec2='ssh ec2-2.petefowler.com'
