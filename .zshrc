@@ -22,7 +22,7 @@ ZSH_THEME="dstufft"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx ruby github brew rbenv yarn)
+plugins=(git osx ruby github brew rbenv yarn docker)
 
 source $ZSH/oh-my-zsh.sh
 # export PROMPT='%{$fg[green]%}%m %~%{$fg_bold[blue]%}$(git_prompt_info)%{$reset_color%} '
@@ -116,6 +116,8 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 
 
-export VOLTA_HOME="$HOME/.volta"
-grep --silent "$VOLTA_HOME/bin" <<< $PATH || export PATH="$VOLTA_HOME/bin:$PATH"
 [ -d /Users/dylan/.asdf ] && . $(brew --prefix asdf)/asdf.sh
+
+alias gam="/Users/dylan/bin/gamadv-xtd3/gam"
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
