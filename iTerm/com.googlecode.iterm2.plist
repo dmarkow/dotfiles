@@ -45119,7 +45119,7 @@
 	<key>EnableRendezvous</key>
 	<false/>
 	<key>FastTrackpad</key>
-	<false/>
+	<true/>
 	<key>FlashTabBarInFullscreen</key>
 	<true/>
 	<key>FocusFollowsMouse</key>
@@ -45139,7 +45139,7 @@
 	<key>HideMenuBarInFullscreen</key>
 	<true/>
 	<key>HideScrollbar</key>
-	<true/>
+	<false/>
 	<key>HideTab</key>
 	<false/>
 	<key>HideTabCloseButton</key>
