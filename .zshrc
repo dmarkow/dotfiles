@@ -115,9 +115,6 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 
-
-[ -d /Users/dylan/.asdf ] && . $(brew --prefix asdf)/asdf.sh
-
 alias gam="/Users/dylan/bin/gamadv-xtd3/gam"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"

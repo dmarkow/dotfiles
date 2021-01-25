@@ -1,5 +1,5 @@
 ---
-BUNDLE_JOBS: "7"
+BUNDLE_JOBS: "15"
 BUNDLE_BUILD__PUMA: "--with-opt-dir=/usr/local/opt/openssl"
 BUNDLE_BUILD__EVENTMACHINE: "--with-cppflags=-I/usr/local/opt/openssl/include"
 BUNDLE_BUILD__RASPELL: "--with-opt-dir=/usr/local/opt/aspell"
