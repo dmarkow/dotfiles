@@ -22,17 +22,13 @@ ZSH_THEME="dstufft"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx github brew yarn)
+plugins=(git github brew yarn)
 
 source $ZSH/oh-my-zsh.sh
 # export PROMPT='%{$fg[green]%}%m %~%{$fg_bold[blue]%}$(git_prompt_info)%{$reset_color%} '
 
 # Customize to your needs...
 # Set terminal to allow CTRL+S in vim
-stty -ixon
-
-export EDITOR=vim
-
 export MARKPATH=$HOME/.marks
 function jump {
     cd -P $MARKPATH/$1 2>/dev/null || echo "No such mark: $1"
@@ -62,9 +58,6 @@ alias gi='gem install --no-document'
 alias l='ll'
 alias df='df -h'
 alias sudo='nocorrect sudo'
-export LS_COLORS="ow=01;91:"
-
-# Services
 alias cpd="cap production deploy"
 alias ms='iex -S mix phx.server'
 export HOMEBREW_GITHUB_API_TOKEN=0e7939518d6818f08628f6ccea7e0234215ecb75
@@ -75,3 +68,4 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+export PATH="/usr/local/opt/ruby@2.7/bin:$PATH"
