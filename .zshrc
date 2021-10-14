@@ -68,4 +68,4 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
-export PATH="/usr/local/opt/ruby@2.7/bin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
