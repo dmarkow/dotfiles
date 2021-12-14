@@ -22,7 +22,7 @@ ZSH_THEME="dstufft"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git github brew yarn)
+plugins=(git github brew yarn asdf)
 
 source $ZSH/oh-my-zsh.sh
 # export PROMPT='%{$fg[green]%}%m %~%{$fg_bold[blue]%}$(git_prompt_info)%{$reset_color%} '
@@ -47,7 +47,7 @@ function marks {
 # Aliases
 alias yo="yarn outdated"
 alias yui="yarn upgrade-interactive"
-alias yuil="yarn upgrade-interactive --latest"
+alias yuil="yarn upgrade-interactive --latest; yarn"
 
 alias sshnv='ssh nv.petefowler.com'
 alias sshsc='ssh dylan@sc.petefowler.com'
@@ -58,10 +58,10 @@ alias gi='gem install --no-document'
 alias l='ll'
 alias df='df -h'
 alias sudo='nocorrect sudo'
+unalias grb
 alias cpd="cap production deploy"
 alias ms='iex -S mix phx.server'
-export HOMEBREW_GITHUB_API_TOKEN=0e7939518d6818f08628f6ccea7e0234215ecb75
-export PATH="$HOME/.yarn/bin:./bin:/usr/local/sbin:/usr/local/bin:$PATH"
+export PATH="$HOME/.yarn/bin:$PATH"
 export ERL_AFLAGS="-kernel shell_history enabled"
 
 # tabtab source for electron-forge package
@@ -69,3 +69,14 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
+export CR_PAT=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
+function remote_shell {
+  docker exec -it $(docker ps -q -l -f name=pfcs_api) bash;
+}
+
+function remote_api {
+  docker exec -it $(docker ps -q -l -f name=pfcs_api) bin/api remote;
+}
+
+ASDF_DIR="$(brew --prefix asdf)/libexec"
+[ -f /usr/local/opt/asdf/libexec/asdf.sh ] && . /usr/local/opt/asdf/libexec/asdf.sh
