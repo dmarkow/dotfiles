@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 if [ -d /Users/dylan ]; then
   if [ -f /etc/profile ]; then
     PATH=""
@@ -68,7 +75,7 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
-export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:./bin:$PATH"
 export CR_PAT=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
 function remote_shell {
   docker exec -it $(docker ps -q -l -f name=pfcs_api) bash;
@@ -77,6 +84,14 @@ function remote_shell {
 function remote_api {
   docker exec -it $(docker ps -q -l -f name=pfcs_api) bin/api remote;
 }
+function remote_shell {
+  docker exec -it $(docker ps -q -l -f name=pfcs_api) bash;
+}
+
+function remote_fg {
+  docker exec -it $(docker ps -q -l -f name=pfcs_file-gen) bash;
+}
 
 ASDF_DIR="$(brew --prefix asdf)/libexec"
 [ -f /usr/local/opt/asdf/libexec/asdf.sh ] && . /usr/local/opt/asdf/libexec/asdf.sh
+source $HOME/.cargo/env
