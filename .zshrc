@@ -92,6 +92,5 @@ function remote_fg {
   docker exec -it $(docker ps -q -l -f name=pfcs_file-gen) bash;
 }
 
-ASDF_DIR="$(brew --prefix asdf)/libexec"
+# ASDF_DIR="$(brew --prefix asdf)/libexec"
 [ -f /usr/local/opt/asdf/libexec/asdf.sh ] && . /usr/local/opt/asdf/libexec/asdf.sh
-source $HOME/.cargo/env
