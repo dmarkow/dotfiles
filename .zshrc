@@ -1,9 +1,6 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
 
 if [ -d /Users/dylan ]; then
   if [ -f /etc/profile ]; then
@@ -11,6 +8,8 @@ if [ -d /Users/dylan ]; then
     source /etc/profile
   fi
 fi
+[ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -29,7 +28,7 @@ ZSH_THEME="dstufft"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git github brew yarn asdf)
+plugins=(git github brew yarn asdf docker)
 
 source $ZSH/oh-my-zsh.sh
 # export PROMPT='%{$fg[green]%}%m %~%{$fg_bold[blue]%}$(git_prompt_info)%{$reset_color%} '
@@ -66,17 +65,15 @@ alias l='ll'
 alias df='df -h'
 alias sudo='nocorrect sudo'
 unalias grb
-alias cpd="cap production deploy"
 alias ms='iex -S mix phx.server'
 export PATH="$HOME/.yarn/bin:$PATH"
 export ERL_AFLAGS="-kernel shell_history enabled"
 
 # tabtab source for electron-forge package
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
-export PATH="/usr/local/opt/ruby/bin:./bin:$PATH"
+export PATH="/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/3.1.0/bin/:./bin:$PATH"
 export CR_PAT=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
+[ -f /opt/homebrew/bin/aws_completer ] && complete -C '/opt/homebrew/bin/aws_completer' aws
 function remote_shell {
   docker exec -it $(docker ps -q -l -f name=pfcs_api) bash;
 }
@@ -92,5 +89,6 @@ function remote_fg {
   docker exec -it $(docker ps -q -l -f name=pfcs_file-gen) bash;
 }
 
-# ASDF_DIR="$(brew --prefix asdf)/libexec"
 [ -f /usr/local/opt/asdf/libexec/asdf.sh ] && . /usr/local/opt/asdf/libexec/asdf.sh
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
