@@ -71,7 +71,7 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 # tabtab source for electron-forge package
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
-export PATH="/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/3.1.0/bin/:./bin:$PATH"
+export PATH="/opt/homebrew/opt/ccache/libexec:/opt/homebrew/opt/ruby/bin:/opt/homebrew/bin:/opt/homebrew/lib/ruby/gems/3.1.0/bin/:./bin:$PATH"
 export CR_PAT=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
 [ -f /opt/homebrew/bin/aws_completer ] && complete -C '/opt/homebrew/bin/aws_completer' aws
 function remote_shell {
@@ -89,6 +89,22 @@ function remote_fg {
   docker exec -it $(docker ps -q -l -f name=pfcs_file-gen) bash;
 }
 
-[ -f /usr/local/opt/asdf/libexec/asdf.sh ] && . /usr/local/opt/asdf/libexec/asdf.sh
+[ -f /opt/homebrew/opt/asdf ] && . /opt/homebrew/opt/asdf
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
+# bun completions
+[ -s "/Users/dylan/.bun/_bun" ] && source "/Users/dylan/.bun/_bun"
+
+# Bun
+export BUN_INSTALL="/Users/dylan/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# ccache for xcode
+export CCACHE_SLOPPINESS=clang_index_store,file_stat_matches,include_file_ctime,include_file_mtime,ivfsoverlay,pch_defines,modules,system_headers,time_macros
+export CCACHE_FILECLONE=true
+export CCACHE_DEPEND=true
+export CCACHE_INODECACHE=true
+
+
+

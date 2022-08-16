@@ -45120,6 +45120,8 @@
 	<false/>
 	<key>EnableRendezvous</key>
 	<false/>
+	<key>EnableUnderlineSemanticHistoryOnCmdHover</key>
+	<true/>
 	<key>FastTrackpad</key>
 	<false/>
 	<key>FlashTabBarInFullscreen</key>
@@ -45166,6 +45168,8 @@
 	<integer>1310985</integer>
 	<key>IRMemory</key>
 	<integer>4</integer>
+	<key>IgnoreHardNewlinesInURLs</key>
+	<true/>
 	<key>InstantReplay</key>
 	<true/>
 	<key>JobName</key>
@@ -49070,7 +49074,7 @@
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>ShowMetalFPSmeter</key>
 	<false/>
 	<key>ShowNewOutputIndicator</key>
@@ -49107,6 +49111,8 @@
 	</array>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<false/>
+	<key>URLCharacterSet</key>
+	<string>$.?\/:;%=&amp;_-,+~#@!*'(（)）|[]</string>
 	<key>URLHandlersByGuid</key>
 	<dict/>
 	<key>UseBorder</key>
