@@ -89,8 +89,8 @@ function remote_fg {
   docker exec -it $(docker ps -q -l -f name=pfcs_file-gen) bash;
 }
 
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
+# export VOLTA_HOME="$HOME/.volta"
+# export PATH="$VOLTA_HOME/bin:$PATH"
 
 # bun completions
 [ -s "/Users/dylan/.bun/_bun" ] && source "/Users/dylan/.bun/_bun"
@@ -105,6 +105,10 @@ export CCACHE_FILECLONE=true
 export CCACHE_DEPEND=true
 export CCACHE_INODECACHE=true
 
+eval "$(github-copilot-cli alias -- "$0")"
+
 
 
 [ -f /opt/homebrew/opt/asdf ] && . /opt/homebrew/opt/asdf
+export ANDROID_HOME=/Users/dylan/Library/Android/sdk
+export PATH=/Users/dylan/Library/Android/sdk/platform-tools:$PATH
