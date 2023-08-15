@@ -34,6 +34,8 @@
   default = matching
 [credential]
   helper = osxkeychain
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
 [pull]
 	rebase = true
 [filter "media"]
@@ -53,3 +55,5 @@
 	branch = false
 [init]
 	defaultBranch = main
+[credential "https://dev.azure.com"]
+	useHttpPath = true

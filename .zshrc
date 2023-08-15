@@ -112,3 +112,6 @@ eval "$(github-copilot-cli alias -- "$0")"
 [ -f /opt/homebrew/opt/asdf ] && . /opt/homebrew/opt/asdf
 export ANDROID_HOME=/Users/dylan/Library/Android/sdk
 export PATH=/Users/dylan/Library/Android/sdk/platform-tools:$PATH
+eval 
+EAS_AC_ZSH_SETUP_PATH=/Users/dylan/Library/Caches/eas-cli/autocomplete/zsh_setup && test -f $EAS_AC_ZSH_SETUP_PATH && source $EAS_AC_ZSH_SETUP_PATH; # eas autocomplete setup
+LISTMAX=10000
