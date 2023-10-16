@@ -108,6 +108,7 @@ export CCACHE_INODECACHE=true
 eval "$(github-copilot-cli alias -- "$0")"
 
 
+source "$HOME/.cargo/env"
 
 [ -f /opt/homebrew/opt/asdf ] && . /opt/homebrew/opt/asdf
 export ANDROID_HOME=/Users/dylan/Library/Android/sdk
