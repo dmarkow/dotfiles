@@ -95,6 +95,7 @@ function remote_fg {
 # bun completions
 [ -s "/Users/dylan/.bun/_bun" ] && source "/Users/dylan/.bun/_bun"
 
+ulimit -n 10000
 # Bun
 export BUN_INSTALL="/Users/dylan/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
@@ -113,3 +114,4 @@ EAS_AC_ZSH_SETUP_PATH=/Users/dylan/Library/Caches/eas-cli/autocomplete/zsh_setup
 LISTMAX=10000
 
 alias gam="/Users/dylan/dev/devops/google-account-manager/gam"
+. "$HOME/.cargo/env"            # For sh/bash/zsh/ash/dash/pdksh
