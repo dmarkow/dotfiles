@@ -30,6 +30,10 @@ ZSH_THEME="dstufft"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git github brew yarn asdf docker)
 
+# file size limit
+ulimit -n 10000
+
+
 source $ZSH/oh-my-zsh.sh
 # export PROMPT='%{$fg[green]%}%m %~%{$fg_bold[blue]%}$(git_prompt_info)%{$reset_color%} '
 
@@ -60,7 +64,6 @@ alias sshsc='ssh dylan@sc.petefowler.com'
 alias sshscl='ssh 10.1.0.10'
 alias sshec2='ssh ec2-2.petefowler.com'
 
-alias gi='gem install --no-document'
 alias l='ll'
 alias df='df -h'
 alias sudo='nocorrect sudo'
@@ -113,5 +116,4 @@ eval
 EAS_AC_ZSH_SETUP_PATH=/Users/dylan/Library/Caches/eas-cli/autocomplete/zsh_setup && test -f $EAS_AC_ZSH_SETUP_PATH && source $EAS_AC_ZSH_SETUP_PATH; # eas autocomplete setup
 LISTMAX=10000
 
-alias gam="/Users/dylan/dev/devops/google-account-manager/gam"
-. "$HOME/.cargo/env"            # For sh/bash/zsh/ash/dash/pdksh
+alias gam="/Users/dylan/bin/gam7/gam"

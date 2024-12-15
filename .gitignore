@@ -3,3 +3,4 @@
 *.swp
 .vim/plugged
 .bundle/cache
+.DS_Store
