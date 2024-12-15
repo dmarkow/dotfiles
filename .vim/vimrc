@@ -1,34 +1,36 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'mileszs/ack.vim'
-Plug 'michaeljsmith/vim-indent-object'
+" Plug 'michaeljsmith/vim-indent-object'
 Plug 'tpope/vim-surround'
-Plug 'ervandew/supertab'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-fugitive'
-Plug 'scrooloose/nerdtree'
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-markdown'
+" Plug 'ervandew/supertab'
+" Plug 'tpope/vim-endwise'
+" Plug 'tpope/vim-fugitive'
+" Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-rails'
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'pangloss/vim-javascript'
+" Plug 'cakebaker/scss-syntax.vim'
+" Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'jparise/vim-graphql'
+
 Plug 'kien/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'chriskempson/base16-vim'
-Plug 'Konfekt/FastFold'
-Plug 'elixir-lang/vim-elixir'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'w0ng/vim-hybrid'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-colorscheme-switcher'
-Plug 'ajh17/Spacegray.vim'
-Plug 'vim-scripts/northland.vim'
-Plug 'mxw/vim-jsx'
-Plug 'dracula/vim'
+Plug 'jonathanfilip/vim-lucius'
+
+" Plug 'chriskempson/base16-vim'
+" Plug 'Konfekt/FastFold'
+" Plug 'elixir-lang/vim-elixir'
+" Plug 'SirVer/ultisnips'
+" Plug 'honza/vim-snippets'
+" Plug 'w0ng/vim-hybrid'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+" Plug 'xolox/vim-misc'
+" Plug 'xolox/vim-colorscheme-switcher'
+" Plug 'ajh17/Spacegray.vim'
+" Plug 'vim-scripts/northland.vim'
+" Plug 'mxw/vim-jsx'
+" Plug 'dracula/vim'
 
 call plug#end()
 
@@ -39,7 +41,7 @@ if has("autocmd")
 endif
 
 set number
-set numberwidth=5
+" set numberwidth=10
 " set cursorline
 set ruler
 set mouse=a
@@ -97,9 +99,11 @@ set nomodeline
 syntax on
 set hlsearch
 
+
 """""""""""""""""""""""""""
 " COLOR
 """""""""""""""""""""""""""
+:set termguicolors
 " :set t_Co=256
 " :color base16-ocean
 " set bg=dark
@@ -240,7 +244,7 @@ map <leader>S :call RunNearestTest()<cr>
 map <leader>A :call RunAllTests()<cr>
 map <leader>c :w\|:!cucumber --drb<cr>
 
-
+map <leader>gr :CtrlP app/routes<cr>
 map <leader>gv :CtrlP app/views<cr>
 map <leader>gj :CtrlP app/assets/javascripts<cr>
 map <leader>gc :CtrlP app/controllers<cr>
@@ -328,8 +332,4 @@ let g:netrw_liststyle=3
 map <leader>gb :Gblame<cr>
 let g:airline_theme='base16'
 let g:airline_section_y = '%{fnamemodify(getcwd(), '':t'')}'
-let g:UltiSnipsUsePythonVersion = 2
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
-colors dracula
