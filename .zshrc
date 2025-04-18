@@ -109,7 +109,8 @@ export CCACHE_FILECLONE=true
 export CCACHE_DEPEND=true
 export CCACHE_INODECACHE=true
 
-[ -f /opt/homebrew/opt/asdf ] && . /opt/homebrew/opt/asdf
+export ASDF_DATA_DIR="/Users/dylan/.asdf"
+export PATH="$ASDF_DATA_DIR/shims:$PATH"
 export ANDROID_HOME=/Users/dylan/Library/Android/sdk
 export PATH=/Users/dylan/Library/Android/sdk/platform-tools:$PATH
 eval

@@ -52296,6 +52296,8 @@
 					<string>Started (GET|POST|PUT|PATCH|DELETE).*$</string>
 				</dict>
 			</array>
+			<key>Unicode Normalization</key>
+			<integer>0</integer>
 			<key>Unicode Version</key>
 			<integer>9</integer>
 			<key>Unlimited Scrollback</key>
