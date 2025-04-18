@@ -28,7 +28,7 @@ ZSH_THEME="dstufft"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git github brew yarn asdf docker)
+plugins=(git github brew yarn docker)
 
 # file size limit
 ulimit -n 10000
@@ -116,5 +116,10 @@ export PATH=/Users/dylan/Library/Android/sdk/platform-tools:$PATH
 eval
 EAS_AC_ZSH_SETUP_PATH=/Users/dylan/Library/Caches/eas-cli/autocomplete/zsh_setup && test -f $EAS_AC_ZSH_SETUP_PATH && source $EAS_AC_ZSH_SETUP_PATH; # eas autocomplete setup
 LISTMAX=10000
+
+# append completions to fpath
+fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
 
 alias gam="/Users/dylan/bin/gam7/gam"
