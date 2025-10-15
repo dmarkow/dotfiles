@@ -113,6 +113,9 @@ export ASDF_DATA_DIR="/Users/dylan/.asdf"
 export PATH="$ASDF_DATA_DIR/shims:$PATH"
 export ANDROID_HOME=/Users/dylan/Library/Android/sdk
 export PATH=/Users/dylan/Library/Android/sdk/platform-tools:$PATH
+export EDITOR=cursor
+export PLUG_EDITOR="cursor://file/__FILE__:__LINE__"
+
 eval
 EAS_AC_ZSH_SETUP_PATH=/Users/dylan/Library/Caches/eas-cli/autocomplete/zsh_setup && test -f $EAS_AC_ZSH_SETUP_PATH && source $EAS_AC_ZSH_SETUP_PATH; # eas autocomplete setup
 LISTMAX=10000
@@ -123,3 +126,5 @@ fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
 autoload -Uz compinit && compinit
 
 alias gam="/Users/dylan/bin/gam7/gam"
+
+alias claude="/Users/dylan/.claude/local/claude"
