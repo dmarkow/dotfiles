@@ -67,6 +67,7 @@ alias sshec2='ssh ec2-2.petefowler.com'
 alias l='ll'
 alias df='df -h'
 alias sudo='nocorrect sudo'
+alias lg='lazygit'
 unalias grb
 alias ms='iex -S mix phx.server'
 export PATH="$HOME/.yarn/bin:$PATH"

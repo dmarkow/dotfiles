@@ -1,0 +1,7 @@
+font-family = CommitMono
+font-size = 12
+adjust-cell-height = 34%
+# adjust-cell-width = -10%
+auto-update-channel = tip
+# macos-titlebar-style = tabs
+window-new-tab-position = end
