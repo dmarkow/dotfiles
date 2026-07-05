@@ -129,4 +129,4 @@ export MIX_OS_DEPS_COMPILE_PARTITION_COUNT=$(( $(sysctl -n hw.physicalcpu) / 2 )
 
 alias gam="/Users/dylan/bin/gam7/gam"
 
-alias claude="/Users/dylan/.claude/local/claude"
+export PATH="$HOME/.local/bin:$PATH"
