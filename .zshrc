@@ -125,7 +125,13 @@ LISTMAX=10000
 fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
-export MIX_OS_DEPS_COMPILE_PARTITION_COUNT=$(( $(sysctl -n hw.physicalcpu) / 2 ))
+if [[ "$OSTYPE" == darwin* ]]; then
+  _cpu_count=$(sysctl -n hw.physicalcpu)
+else
+  _cpu_count=$(nproc 2>/dev/null || echo 2)
+fi
+export MIX_OS_DEPS_COMPILE_PARTITION_COUNT=$(( _cpu_count / 2 > 0 ? _cpu_count / 2 : 1 ))
+unset _cpu_count
 
 alias gam="/Users/dylan/bin/gam7/gam"
 eval "$(direnv hook zsh)"
