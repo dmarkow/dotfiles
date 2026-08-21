@@ -117,7 +117,6 @@ export PATH=/Users/dylan/Library/Android/sdk/platform-tools:$PATH
 export EDITOR=cursor
 export PLUG_EDITOR="cursor://file/__FILE__:__LINE__"
 
-eval
 EAS_AC_ZSH_SETUP_PATH=/Users/dylan/Library/Caches/eas-cli/autocomplete/zsh_setup && test -f $EAS_AC_ZSH_SETUP_PATH && source $EAS_AC_ZSH_SETUP_PATH; # eas autocomplete setup
 LISTMAX=10000
 
@@ -134,6 +133,8 @@ export MIX_OS_DEPS_COMPILE_PARTITION_COUNT=$(( _cpu_count / 2 > 0 ? _cpu_count /
 unset _cpu_count
 
 alias gam="/Users/dylan/bin/gam7/gam"
-eval "$(direnv hook zsh)"
+if [[ "$OSTYPE" == darwin* ]]; then
+  eval "$(direnv hook zsh)"
+fi
 
 export PATH="$HOME/.local/bin:$PATH"
