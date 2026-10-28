@@ -28,7 +28,7 @@ ZSH_THEME="dstufft"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git github brew yarn docker)
+plugins=(git brew yarn docker)
 
 # file size limit
 ulimit -n 10000
@@ -135,6 +135,17 @@ unset _cpu_count
 alias gam="/Users/dylan/bin/gam7/gam"
 if [[ "$OSTYPE" == darwin* ]]; then
   eval "$(direnv hook zsh)"
+  export PATH="$(brew --prefix rustup)/bin:$PATH"
+  export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
 fi
 
 export PATH="$HOME/.local/bin:$PATH"
+
+# opencode
+export PATH=/Users/dylan/.opencode/bin:$PATH
+
+# Claude Code: pass unmatched globs through like bash (grep --include=*.ex)
+[[ -n $CLAUDECODE ]] && setopt NO_NOMATCH NO_EQUALS
+
+# Machine-local secrets (not committed)
+[ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
