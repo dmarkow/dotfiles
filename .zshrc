@@ -144,8 +144,8 @@ export PATH="$HOME/.local/bin:$PATH"
 # opencode
 export PATH=/Users/dylan/.opencode/bin:$PATH
 
-# Claude Code: pass unmatched globs through like bash (grep --include=*.ex)
-[[ -n $CLAUDECODE ]] && setopt NO_NOMATCH NO_EQUALS
+# Claude Code: bash-like globs and word splitting
+[[ -n $CLAUDECODE ]] && setopt NO_NOMATCH NO_EQUALS SH_WORD_SPLIT
 
 # Machine-local secrets (not committed)
 [ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
